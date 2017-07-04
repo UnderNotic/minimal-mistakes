@@ -78,7 +78,7 @@ analytics:
 # Site Author
 author:
   name             : "Piotr Szymura"
-  avatar           : "/assets/images/github_ava.jpg"
+  avatar           : "/assets/images/github_ava.png"
   bio              : "I am an amazing person."
   location         : "Wrocław"
   email            : "undernotic@gmail.com"
@@ -89,18 +89,18 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "https://github.com/UnderNotic"
+  github           : "UnderNotic"
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/piotr-szymura-39783a8b/"
+  linkedin         : "piotr-szymura-39783a8b"
   pinterest        :
   soundcloud       :
   stackoverflow    : "4519970/undernotic"
   steam            :
   tumblr           :
-  twitter          : "https://twitter.com/UnderNotic"
+  twitter          : "UnderNotic"
   vine             :
   weibo            :
   xing             :
