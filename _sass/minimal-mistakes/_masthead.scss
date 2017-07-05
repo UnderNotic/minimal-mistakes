@@ -6,9 +6,9 @@
   position: relative;
   border-bottom: 1px solid $border-color;
   -webkit-animation: intro 0.3s both;
-          animation: intro 0.3s both;
+  animation: intro 0.3s both;
   -webkit-animation-delay: 0.15s;
-          animation-delay: 0.15s;
+  animation-delay: 0.15s;
   z-index: 20;
 
   &__inner-wrap {
@@ -17,7 +17,7 @@
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: justify;
-     justify-content: space-between;
+    justify-content: space-between;
     padding: 1em 1em 1em;
     font-family: $sans-serif-narrow;
 
@@ -38,10 +38,11 @@
 .site-title {
   display: -webkit-box;
   display: flex;
+  color: green;
   padding: 0.5rem 0;
   align-self: stretch;
   -webkit-box-align: center;
-        align-items: center;
+  align-items: center;
   font-weight: bold;
   z-index: 20;
 }
