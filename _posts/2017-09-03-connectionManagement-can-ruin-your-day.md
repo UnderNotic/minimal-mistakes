@@ -55,6 +55,7 @@ Following code is:
 * resolving domain name to ip
 * calling sample api with HttpWebRequest, HttpClient, RestSharp (all of them respect maxconnectionlimit)
 * checking underlying open connection and printing it
+
 Disabling KeepAlive will result in opening more tcp connections.
 
 {% highlight csharp linenos %}
