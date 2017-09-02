@@ -1,64 +1,63 @@
 ---
-title: "<connectionManagement> can ruin your day"
-excerpt: "Parallelizing http calls."
+title: ".NET &lt;connectionManagement&gt; can ruin your day"
+excerpt: "Parallelizing http calls in .NET"
 header:
   teaser: "assets/images/connectionManagement-can-ruin-your-day.png"
 tags: 
   - .net
   - .netcore
+  - .appconfig
   - c#
   - networking
----
+--- 
+### ConnectionManagement
+ConnectionManagement is a property found in app.config that allows to put a limit on number of connections to a specific host at tcp level.  
+This affects http calls, every one of these need estabilished tcp connection "underneath", client needs to reuse or open a new port to listen for the response from the server.[^1]  
+Together with various http headers it can be misunderstood providing unexpected behaviour.
 
-Syntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.[^1]
+[^1]: <http://blog.catchpoint.com/2010/09/17/anatomyhttp/>
 
-[^1]: <http://en.wikipedia.org/wiki/Syntax_highlighting>
+```xml
+<configuration>  
+  <system.net>  
+    <connectionManagement>  
+      <add address = "http://www.contoso.com" maxconnection = "4" />  
+      <add address = "*" maxconnection = "2" />  
+    </connectionManagement>  
+  </system.net>  
+</configuration>  
+```
+Setting ConnectionManagement is pretty straightforward, more specific entries are prioritezed.  
+For configuration above - every host other than "http://www.contoso.com" has maxconnection set on 2 meaning that there can be only 2 parallel calls to exact same host.
 
-### GFM Code Blocks
-
-GitHub Flavored Markdown [fenced code blocks](https://help.github.com/articles/creating-and-highlighting-code-blocks/) are supported. To modify styling and highlight colors edit `/_sass/syntax.scss`.
-
-```css
-#container {
-  float: left;
-  margin: 0 -240px 0 0;
-  width: 100%;
-}
+### TCP
+If ConnectionManagement property is not in app.config it will default to 2.
+It's recommended setting for calling external services (blacklisting), never the less in internal environment sometimes you want to parallelize it more for example if service doesn't support batching and/or there is need for a faster response.
+```xml
+<add address = "*" maxconnection = "2" />  
 ```
 
-{% highlight scss %}
-.highlight {
-  margin: 0;
-  padding: 1em;
-  font-family: $monospace;
-  font-size: $type-size-7;
-  line-height: 1.8;
-}
-{% endhighlight %}
+In .net core this doesn't apply, by default there is no limit. 
 
-```html
-{% raw %}<nav class="pagination" role="navigation">
-  {% if page.previous %}
-    <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">Previous article</a>
-  {% endif %}
-  {% if page.next %}
-    <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">Next article</a>
-  {% endif %}
-</nav><!-- /.pagination -->{% endraw %}
-```
+### Connection: keep-alive
+This magic header (usually turned on by default) allows to reuse existing tcp connection and not create a new one(every http call gets it own tcp connection), which is noticable performance wise.  
+It's worth noting it can take up to around 3 minutes to close tcp connection(socket) if there is unsent data from server waiting.    
+When You think about it turning it off with conjuction of high maxconnectionlimit can deplet ports that client host has available resulting in fatal exception when trying to make another http call.
 
-{% highlight html linenos %}
-{% raw %}<nav class="pagination" role="navigation">
-  {% if page.previous %}
-    <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">Previous article</a>
-  {% endif %}
-  {% if page.next %}
-    <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">Next article</a>
-  {% endif %}
-</nav><!-- /.pagination -->{% endraw %}
-{% endhighlight %}
+### NTLM and UnsafeAuthenticatedConnectionSharing
+Depletion of ports can also happen when using ntlm.   
+For security reasons ntlm is forcing every http call to initialize new tcp connection (authentication on tcp level).   
+Thus keep-alive doesn't matter in this scenario, which can lead again to port depletion.  
+Luckilly reusing connections can be forced by enabling UnsafeAuthenticatedConnectionSharing on HttpWebRequest.
 
-```csharp
+### Code Example
+Following code is:
+* resolving domain name to ip
+* calling sample api with HttpWebRequest, HttpClient, RestSharp (all of them respect maxconnectionlimit)
+* checking underlying open connection and printing it
+Disabling KeepAlive will result in opening more tcp connections.
+
+{% highlight csharp linenos %}
 using RestSharp;
 using System;
 using System.IO;
@@ -69,7 +68,7 @@ using System.Net.NetworkInformation;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace ConsoleApp
 {
     class TextHolder
     {
@@ -78,7 +77,7 @@ namespace ConsoleApp2
 
     class Program
     {
-        private static readonly string _address = "www.google.com";
+        private static readonly string _address = "www.example.com";
         private static readonly string _fullAddress = $"http://{_address}";
         private static readonly string _addressIp = Dns.GetHostAddresses(_address)[0].ToString();
         private static readonly HttpClient _httpClient = new HttpClient();
@@ -100,20 +99,20 @@ namespace ConsoleApp2
         static async void Run()
         {
             Console.WriteLine("\n HttpWebRequest");
-            for (var i = 0; i < 6; i++)
+            for (var i = 0; i < 10; i++)
             {
                 CallWithWebRequest();
             }
             await Task.Delay(2000);
             Console.WriteLine("\n HttpClient");
-            for (var i = 0; i < 6; i++)
+            for (var i = 0; i < 10; i++)
             {
                 CallWithHttpClient();
 
             }
             await Task.Delay(2000);
             Console.WriteLine("\n RestSharp");
-            for (var i = 0; i < 6; i++)
+            for (var i = 0; i < 10; i++)
             {
                 CallWithRestSharp();
             }
@@ -168,27 +167,6 @@ namespace ConsoleApp2
         }
     }
 }
-```
+{% endhighlight %}
 
-### Code Blocks in Lists
-
-Indentation matters. Be sure the indent of the code block aligns with the first non-space character after the list item marker (e.g., `1.`). Usually this will mean indenting 3 spaces instead of 4.
-
-1. Do step 1.
-2. Now do this:
-   
-   ```ruby
-   def print_hi(name)
-     puts "Hi, #{name}"
-   end
-   print_hi('Tom')
-   #=> prints 'Hi, Tom' to STDOUT.
-   ```
-        
-3. Now you can do this.
-
-### GitHub Gist Embed
-
-An example of a Gist embed below.
-
-{% gist mmistakes/6589546 %}
+Cheers!
