@@ -32,7 +32,7 @@ For configuration above - every host other than "http://www.contoso.com" has max
 
 ### TCP
 If ConnectionManagement property is not in app.config it will default to 2.
-It's recommended setting for calling external services (blacklisting), never the less in internal environment sometimes you want to parallelize it more for example if service doesn't support batching and/or there is need for a faster response.
+It's recommended setting for calling external services (blacklisting), nevertheless in internal environment sometimes you want to parallelize it more for example if service doesn't support batching and/or there is need for a faster response.
 ```xml
 <add address = "*" maxconnection = "2" />  
 ```
@@ -50,7 +50,7 @@ For security reasons ntlm is forcing every http call to initialize new tcp conne
 Thus keep-alive doesn't matter in this scenario, which can lead again to port depletion.  
 Luckilly reusing connections can be forced by enabling UnsafeAuthenticatedConnectionSharing on HttpWebRequest.
 
-### Code Example
+### Play around
 Following code is:
 * resolving domain name to ip
 * calling sample api with HttpWebRequest, HttpClient, RestSharp (all of them respect maxconnectionlimit)
