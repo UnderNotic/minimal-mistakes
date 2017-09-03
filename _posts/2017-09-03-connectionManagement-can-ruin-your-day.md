@@ -31,7 +31,7 @@ Setting ConnectionManagement is pretty straightforward, more specific entries ar
 For configuration above - every host other than "http://www.contoso.com" has maxconnection set on 2 meaning that there can be only 2 parallel calls to exact same host.
 
 ### TCP
-If ConnectionManagement property is not in app.config it will default to 2.
+If ConnectionManagement property is not set in app.config it will default to 2.
 It's recommended setting for calling external services (blacklisting), nevertheless in internal environment sometimes you want to parallelize it more for example if service doesn't support batching and/or there is need for a faster response.
 ```xml
 <add address = "*" maxconnection = "2" />  
