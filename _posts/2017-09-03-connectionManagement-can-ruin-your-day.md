@@ -7,7 +7,7 @@ tags:
   - .net
   - .netcore
   - .appconfig
-  - c#
+  - csharp
   - networking
 --- 
 ### ConnectionManagement
