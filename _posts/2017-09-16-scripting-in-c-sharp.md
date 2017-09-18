@@ -62,7 +62,6 @@ cd scriptcs
 
 - restore nuget packages
 ```bash
-mozroots --import --sync --quiet
 mono ./.nuget/NuGet.exe restore ./.nuget/packages.config -PackagesDirectory ./packages
 mono ./.nuget/NuGet.exe restore ./ScriptCs.sln
 ```
