@@ -80,8 +80,7 @@ msbuild ./ScriptCs.sln /property:Configuration=Release /nologo /verbosity:normal
   sudo nano scriptcs 
   ## copy & paste 
   #!/usr/bin/env bash 
-  DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" 
-  mono "$DIR/scriptcs.exe" $@ 
+  mono "/usr/share/scriptcs/scriptcs.exe"
 ```
 
 - create symlink to add scriptcs to path
