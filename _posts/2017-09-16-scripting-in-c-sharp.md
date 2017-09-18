@@ -86,7 +86,7 @@ msbuild ./ScriptCs.sln /property:Configuration=Release /nologo /verbosity:normal
 
 - create symlink to add scriptcs to path
 ```bash
-ln -s ./scriptcs /usr/bin/scriptcs
+ln -s {path to bash script} /usr/bin/scriptcs
 ```
 
 ### Code Runner 
