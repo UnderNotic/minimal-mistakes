@@ -1,6 +1,6 @@
 ---
 title: "Url reservation in owin"
-excerpt: "C# repl everywhere"
+excerpt: "Stars and pluses"
 header:
  teaser:
 tags: 
