@@ -48,7 +48,8 @@ Prerequisites are:
 
 - install msbuild:  
 ```bash
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF\n  echo \"deb http://download.mono-project.com/repo/debian wheezy main\" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+echo "deb http://download.mono-project.com/repo/ubuntu xenial main" | sudo tee /etc/apt/sources.list.d/mono-official.list
 sudo apt-get -qq update
 sudo apt-get install msbuild
 ```
@@ -61,7 +62,6 @@ cd scriptcs
 
 - restore nuget packages
 ```bash
-mozroots --import --sync --quiet
 mono ./.nuget/NuGet.exe restore ./.nuget/packages.config -PackagesDirectory ./packages
 mono ./.nuget/NuGet.exe restore ./ScriptCs.sln
 ```
@@ -80,13 +80,12 @@ msbuild ./ScriptCs.sln /property:Configuration=Release /nologo /verbosity:normal
   sudo nano scriptcs 
   ## copy & paste 
   #!/usr/bin/env bash 
-  DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" 
-  mono "$DIR/scriptcs.exe" $@ 
+  mono "/usr/share/scriptcs/scriptcs.exe"
 ```
 
 - create symlink to add scriptcs to path
 ```bash
-ln -s ./scriptcs /usr/bin/scriptcs
+ln -s {path to bash script} /usr/bin/scriptcs
 ```
 
 ### Code Runner 
