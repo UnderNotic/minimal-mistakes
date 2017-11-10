@@ -48,7 +48,7 @@ using (WebApp.Start<Startup> ("http://mywebsite:80/"))
 }
 
 //Service #2
-using (WebApp.Start<Startup> ("http://+:80/")) 
+using (WebApp.Start<Startup> ("http://*:80/")) 
 {
     Console.WriteLine("Service #2");
 }
