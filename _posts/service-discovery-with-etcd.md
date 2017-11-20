@@ -29,6 +29,8 @@ Let start right off the bat with quick overview what `etcd` is:
 - usually used for handling state in distributed systems (service discovery, shared configuration)
 - used in Kubernetes
 
+All this make etcd good candidate to store data used in service discovery.
+
 [^1]: <https://coreos.com/etcd/docs/latest/learning/api_guarantees.html/>
 [^2}: <https://kubernetes.io/>
 
@@ -46,6 +48,11 @@ As oppose to client side service discovery this solution is language agnostic bu
 
 [^3]: <https://www.nginx.com/blog/service-discovery-in-a-microservices-architecture/>
 ### The Heartbeat
+
+I had written example service discovery application showcasing client side service discovery with etcd as a service registry.
+Solution consists of 3 projects:
+
+
 
 https://github.com/UnderNotic/etcd_spike
 
