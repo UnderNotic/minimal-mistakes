@@ -73,9 +73,9 @@ Solution consists of 3 projects:
 ### The Heartbeat
 
 `Node` reprents whatever service in the system that can scale horizontally and to whom requests are load-balanced.   
-On startup node is taking whatever port is available starting from 8080, then it's putting lease in etcd, which is basically setting key-value pair with 10 seconds TTL (time to live), once it is set, it starts refreshing TTL every 5 seconds. If Node dies, hangs... setted up heatbeat key-value pair will be removed at the same time making this node unavailable and undiscoverable for the gateway.
+On startup node is taking whatever port is available starting from 8080, then it's putting lease in etcd, which is basically setting key-value pair with 10 seconds TTL (time to live), once it is set, it starts refreshing TTL every 5 seconds. If Node dies, hangs... set up heatbeat key-value pair will be removed at the same time making this node unavailable and undiscoverable for the gateway.
 
-Key is designed in the following way `heartbeat|{NODE_TYPE}|{url}`, so the gateway can make use of etcd range subscribe to watch only for keys that starts with `heartbeat`, also from that key, information about node type and url that it is hosted at can be retrieved.
+Key is designed in the following way `heartbeat|{NODE_TYPE}|{url}`, so the gateway can make use of etcd range subscribe to watch only for keys that starts with `heartbeat`, also from that key, information about node type and url that it is hosted at, can be retrieved.
 
 ```csharp
  private async void Run(string url)
@@ -89,7 +89,7 @@ Key is designed in the following way `heartbeat|{NODE_TYPE}|{url}`, so the gatew
 ### Load balancing
 
 `Gateway` manages dictionary structure that holds information about available nodes in the system.
-It subscribes to heartbeats in etcd using WatchRange and update dictionary state accordingly.
+It subscribes to heartbeats in etcd using WatchRange and updates dictionary state accordingly.
 
 Using that dictionary incoming requests are load-balanced to random available node.
 
@@ -179,7 +179,7 @@ public ApiModule()
     }
 ```
 
-With that gateway is calling node process, which exposes by following code
+While calling above api, gateway will call node process, which exposes himself by following code
 ```csharp
 public class ApiModule : NancyModule
 {
@@ -206,7 +206,7 @@ public class ApiModule : NancyModule
 
 ### Etcd Grcp Client library.
 
-I extracted grpc part from above project to seperate github repo and created nuget out of that.   
+I extracted grpc part from above project to separate github repo and created nuget out of that.   
 It greatly simplifies communication with etcd in dotnet projects, and since it's .net standard package it can be used in both .net framework and .net core projects.   
 Check it out if it fits your needs and contribute :)
 
