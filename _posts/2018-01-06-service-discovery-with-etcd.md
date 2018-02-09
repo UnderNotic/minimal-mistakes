@@ -19,7 +19,7 @@ Let start right off the bat with quick overview what `etcd` is:
 
 * distributed key/value store with failover mechanism
 * heavily uses disk but also use in memory cache
-* AP regarding CAP theorem
+* AP regarding CAP theorem[^1]
 * sequential consistency ( the strongest consistency guarantee available from distributed systems)
 * data is persisted, after etcd restart, previously added data is still there
 * max request size 1MB
@@ -29,13 +29,13 @@ Let start right off the bat with quick overview what `etcd` is:
 * uses grcp for communication
 * uses RAFT (leader election)
 * usually used for handling state in distributed systems (service discovery, shared configuration)
-* used in Kubernetes
+* used in Kubernetes[^2]
 
 All this make etcd good candidate to store data used in service discovery.
 
-[^1]: <https://coreos.com/etcd/docs/latest/learning/api_guarantees.html/>
+[^1]: <https://coreos.com/etcd/docs/latest/learning/api_guarantees.html>
 
-[^2}: <https://kubernetes.io/>
+[^2]: <https://kubernetes.io/>
 
 ### Client Side Service Discovery
 
@@ -73,9 +73,9 @@ Solution consists of 3 projects:
 ### The Heartbeat
 
 `Node` reprents whatever service in the system that can scale horizontally and to whom requests are load-balanced.   
-On startup node is taking whatever port is available starting from 8080, then it's putting lease in etcd, which is basically setting key-value pair with 10 seconds TTL (time to live), once it is set, it starts refreshing TTL every 5 seconds. If Node dies, hangs... setted up heatbeat key-value pair will be removed at the same time making this node unavailable and undiscoverable for the gateway.
+On startup node is taking whatever port is available starting from 8080, then it's putting lease in etcd, which is basically setting key-value pair with 10 seconds TTL (time to live), once it is set, it starts refreshing TTL every 5 seconds. If Node dies, hangs... set up heatbeat key-value pair will be removed at the same time making this node unavailable and undiscoverable for the gateway.
 
-Key is designed in the following way `heartbeat|{NODE_TYPE}|{url}`, so the gateway can make use of etcd range subscribe to watch only for keys that starts with `heartbeat`, also from that key, information about node type and url that it is hosted at can be retrieved.
+Key is designed in the following way `heartbeat|{NODE_TYPE}|{url}`, so the gateway can make use of etcd range subscribe to watch only for keys that starts with `heartbeat`, also from that key, information about node type and url that it is hosted at, can be retrieved.
 
 ```csharp
  private async void Run(string url)
@@ -89,7 +89,7 @@ Key is designed in the following way `heartbeat|{NODE_TYPE}|{url}`, so the gatew
 ### Load balancing
 
 `Gateway` manages dictionary structure that holds information about available nodes in the system.
-It subscribes to heartbeats in etcd using WatchRange and update dictionary state accordingly.
+It subscribes to heartbeats in etcd using WatchRange and updates dictionary state accordingly.
 
 Using that dictionary incoming requests are load-balanced to random available node.
 
@@ -179,7 +179,7 @@ public ApiModule()
     }
 ```
 
-With that gateway is calling node process, which exposes by following code
+While calling above api, gateway will call node process, which exposes himself by following code
 ```csharp
 public class ApiModule : NancyModule
 {
@@ -204,9 +204,9 @@ public class ApiModule : NancyModule
 }
 ```
 
-### Etcd Grcp Client library.
+### Etcd Grcp Client library
 
-I extracted grpc part from above project to seperate github repo and created nuget out of that.   
+I extracted grpc part from above project to separate github repo and created nuget out of that.   
 It greatly simplifies communication with etcd in dotnet projects, and since it's .net standard package it can be used in both .net framework and .net core projects.   
 Check it out if it fits your needs and contribute :)
 
