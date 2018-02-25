@@ -59,7 +59,7 @@ src/
             .
             .
     css/ -> css related files if not using css-in-js
-    images/ -> images
+    assets/ -> images, fonts etc.
     utils/ -> code that doesn't fit into any other place
     index.js -> entry point
     configureStore.js -> redux store configuration
