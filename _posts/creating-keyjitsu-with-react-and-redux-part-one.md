@@ -9,7 +9,7 @@ tags:
   - redux
 --- 
 
-### Basic setup
+## Basic setup
 Let starts with scallafolding boilerpalte with create-react-app:
 
 ```

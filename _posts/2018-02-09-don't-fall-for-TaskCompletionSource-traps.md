@@ -10,7 +10,7 @@ tags:
   - TaskCompletionSource
 ---
 
-### Wrapping callback hell with TaskCompletionSource
+## Wrapping callback hell with TaskCompletionSource
 
 Ever wanted to turn callback style async code to awaitable form?
 You might use `TaskCompletionSource` for it.

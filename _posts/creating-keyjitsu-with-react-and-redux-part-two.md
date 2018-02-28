@@ -9,10 +9,10 @@ tags:
   - redux
 --- 
 
-### Home Component 
+## Home Component 
 
-### Hotkey types
+## Hotkey types
 
-### Modeling the problem
+## Modeling the problem
 
-### Browser compatibility
+## Browser compatibility

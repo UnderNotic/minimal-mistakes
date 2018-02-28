@@ -14,12 +14,12 @@ tags:
   - linux
 --- 
 
-### C# REPL
+## C# REPL
 Do You ever wanted to run C# code in a scripty inline way to check if code will execute the way you want?   
 This could be especially useful when you don't have powerful visual studio with repl(interactive) and You are writing C# in something lightweight like `vs code`.  
 I decided to write this post because installing scriptcs is cumbersome, most of the guides/docs out there don't help much.
 
-### On Windows
+## On Windows
 On Windows it's pretty straightforward:   
 Install `chocolatey`, in powershell type: 
 ```powershell
@@ -37,7 +37,7 @@ choco install scriptcs
 It's added to path automatically, easy mode.
 
 
-### On Linux
+## On Linux
 Troubles begin on linux. Since you don't have chocolatey there and striptcs doesn't provide any deb package.   
 It took me humongous amount o time to figure out how to make it work. I had to check on travis how project is build on linux.  
 For sake of this I'm using mint 18, for ubuntu should be the same.
@@ -88,7 +88,7 @@ msbuild ./ScriptCs.sln /property:Configuration=Release /nologo /verbosity:normal
 ln -s {path to bash script} /usr/bin/scriptcs
 ```
 
-### Code Runner 
+## Code Runner 
 Just type scriptcs in terminal and here you go.   
 If you want something more neat use it with `vs code` and `Code Runner` extension, which is using scriptcs to run selected code.  
 Go grab it, select C# code in vs code, hit ctrl + alt + n and enjoy output from scriptcs (remember to print out what you want to see).  
