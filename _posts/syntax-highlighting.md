@@ -14,7 +14,7 @@ Syntax highlighting is a feature that displays source code, in different colors 
 
 [^1]: <http://en.wikipedia.org/wiki/Syntax_highlighting>
 
-### GFM Code Blocks
+## GFM Code Blocks
 
 GitHub Flavored Markdown [fenced code blocks](https://help.github.com/articles/creating-and-highlighting-code-blocks/) are supported. To modify styling and highlight colors edit `/_sass/syntax.scss`.
 
@@ -78,7 +78,7 @@ module Jekyll
 end
 ```
 
-### Code Blocks in Lists
+## Code Blocks in Lists
 
 Indentation matters. Be sure the indent of the code block aligns with the first non-space character after the list item marker (e.g., `1.`). Usually this will mean indenting 3 spaces instead of 4.
 
@@ -95,7 +95,7 @@ Indentation matters. Be sure the indent of the code block aligns with the first 
         
 3. Now you can do this.
 
-### GitHub Gist Embed
+## GitHub Gist Embed
 
 An example of a Gist embed below.
 

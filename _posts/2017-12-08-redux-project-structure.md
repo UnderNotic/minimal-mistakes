@@ -11,9 +11,8 @@ tags:
   - js
   - frontend
 --- 
-### Not so hot way
+## Not so hot way
 Typical structure for example project looks something like this:
-
 ```
 components/
     TodoList.js
@@ -36,7 +35,7 @@ Files are grouped by technology roles not by features.
 It is completely fine to use it for small projects but as project grows this won't scale up.
 Having more than 10 files in directory makes searching difficult, also import autocomplete becomes a hassle with dozen of options available.
 
-### Features oriented over everything else
+## Features oriented over everything else
 Personally I recommend and use below structure:
 ```
 src/
@@ -59,7 +58,7 @@ src/
             .
             .
     css/ -> css related files if not using css-in-js
-    images/ -> images
+    assets/ -> images, fonts etc.
     utils/ -> code that doesn't fit into any other place
     index.js -> entry point
     configureStore.js -> redux store configuration
@@ -139,7 +138,7 @@ NODE_PATH=src/
 ```   
 This file is used by default in create-react-app so if your using it nothing `webpack'y` has to be configured.
 
-### File naming convention
+## File naming convention
 In the past I was using kebab-case for both files and directories no matter what was inside. I wanted to have same convention for server-side code (nodejs) and front-end code (react). 
 But I took a different direction and went with community, deciding to use a convention that will tell from just watching at the name of a file or directory what is inside.
 - If a file is exporting something that can be instantiated (class, component) then use PascalCase

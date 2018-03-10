@@ -9,7 +9,7 @@ tags:
   - redux
 --- 
 
-### Basic setup
+## Basic setup
 Let starts with scallafolding boilerpalte with create-react-app:
 
 ```
@@ -210,3 +210,8 @@ Now start with `npm start` and You should see Hello world on grey background.
 
 Let check basic test setup:
 
+# mocking redux store with redux wrapper 
+
+# jest tests with enzyme
+
+# it runs

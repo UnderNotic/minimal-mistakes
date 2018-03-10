@@ -10,10 +10,10 @@ tags:
   - TaskCompletionSource
 ---
 
-### Wrapping callback hell with TaskCompletionSource
+## Wrapping callback hell with TaskCompletionSource
 
 Ever wanted to turn callback style async code to awaitable form?
-You might used TaskCompletionSource for it.
+You might use `TaskCompletionSource` for it.
 
 ```csharp
   class Program
@@ -26,8 +26,8 @@ You might used TaskCompletionSource for it.
 
         static async Task Run()
         {
-            CallbackStyleAsyncMethod((result) => Console.WriteLine(result)); //callback style
-            var asyncResult = await CallbackStyleAsyncMethodWrappedAsync(); //async/await style
+            CallbackStyleAsyncMethod((result) => Console.WriteLine(result)); // callback style
+            var asyncResult = await CallbackStyleAsyncMethodWrappedAsync(); // async/await style
             Console.WriteLine(asyncResult);
         }
 
@@ -49,13 +49,15 @@ You might used TaskCompletionSource for it.
 
 There is one problem with above code that happens very often.
 In case of exception it won't be catched in try/catch block. 
-This exception won't be even printed in console windows unless It's handled by TaskScheduler.UnobservedTaskException Event or DomainUnhandledException Event.
+This exception won't be even printed in console window/terminal unless it's handled by `TaskScheduler.UnobservedTaskException`  or `DomainUnhandledException` Event.
 
 ```csharp
  try
             {
                 var tsc = new TaskCompletionSource<string>();
-                CallbackStyleAsyncMethod((res) => tsc.SetResult(new string[] { "a" }[1])); // runtime exception
+                CallbackStyleAsyncMethod(
+                    (res) => tsc.SetResult(new string[] { "a" }[1]) // runtime exception
+                ); 
                 return tsc.Task;
             }
             catch (Exception ex)
