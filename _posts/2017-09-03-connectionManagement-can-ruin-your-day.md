@@ -27,7 +27,7 @@ Together with various http headers it can be misunderstood providing unexpected 
   </system.net>  
 </configuration>  
 ```
-Setting ConnectionManagement is pretty straightforward, more specific entries are prioritezed.  
+Setting ConnectionManagement is pretty straightforward, more specific entries are prioritized.  
 For configuration above - every host other than "http://www.contoso.com" has maxconnection set on 2 meaning that there can be only 2 parallel calls to exact same host.
 
 ## TCP
