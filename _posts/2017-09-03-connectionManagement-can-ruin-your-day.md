@@ -27,7 +27,7 @@ Together with various http headers it can be misunderstood providing unexpected 
   </system.net>  
 </configuration>  
 ```
-Setting ConnectionManagement is pretty straightforward, more specific entries are prioritezed.  
+Setting ConnectionManagement is pretty straightforward, more specific entries are prioritized.  
 For configuration above - every host other than "http://www.contoso.com" has maxconnection set on 2 meaning that there can be only 2 parallel calls to exact same host.
 
 ## TCP
@@ -40,15 +40,15 @@ It's recommended setting for calling external services (blacklisting), neverthel
 In .net core this doesn't apply, by default there is no limit. 
 
 ## Connection: keep-alive
-This magic header (usually turned on by default) allows to reuse existing tcp connection and not create a new one(every http call gets it own tcp connection), which is noticable performance wise.  
+This magic header (usually turned on by default) allows to reuse existing tcp connection and not create a new one(every http call gets it own tcp connection), which is noticeable performance wise.  
 It's worth noting it can take up to around 3 minutes to close tcp connection(socket) if there is unsent data from server waiting.    
-When You think about it turning it off with conjuction of high maxconnectionlimit can deplet ports that client host has available resulting in fatal exception when trying to make another http call.
+When You think about it turning it off with conjuction of high maxconnectionlimit can deplete ports that client host has available resulting in fatal exception when trying to make another http call.
 
 ## NTLM and UnsafeAuthenticatedConnectionSharing
 Depletion of ports can also happen when using ntlm.   
 For security reasons ntlm is forcing every http call to initialize new tcp connection (authentication on tcp level).   
 Thus keep-alive doesn't matter in this scenario, which can lead again to port depletion.  
-Luckilly reusing connections can be forced by enabling UnsafeAuthenticatedConnectionSharing on HttpWebRequest.
+Luckily reusing connections can be forced by UnsafeAuthenticatedConnectionSharing on HttpWebRequest.
 
 ## Play around
 Following code is:
