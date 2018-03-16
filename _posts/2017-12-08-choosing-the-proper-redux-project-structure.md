@@ -1,5 +1,5 @@
 ---
-title: "React / Redux project structure"
+title: "Choosing the proper react / redux project structure"
 excerpt: "Redux project structure and naming convention"
 header:
  teaser: "assets/images/redux-project-structure.png"
