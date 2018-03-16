@@ -2,8 +2,6 @@
 title: Projects
 layout: single
 author_profile: true
-sidebar:
-  nav: main
 permalink: "/projects/"
 excerpt: My projects
 hide_signup: true
