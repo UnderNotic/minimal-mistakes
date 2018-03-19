@@ -141,11 +141,11 @@ This file is used by default in create-react-app so if your using it nothing `we
 ## File naming convention
 In the past I was using kebab-case for both files and directories no matter what was inside. I wanted to have same convention for server-side code (nodejs) and front-end code (react). 
 But I took a different direction and went with community, deciding to use a convention that will tell from just watching at the name of a file or directory what is inside.
-- If a file is exporting something that can be instantiated (class, component) then use PascalCase
+- if a file is exporting something that can be instantiated (class, component) then use PascalCase
 - index.js files are lower-case
 - everything else is camelCase
 - test files are pascalCase.test.js
-- directories containing index.js, which fullfil point number 1, should be PascalCase
+- directories containing index.js, which fulfil point number 1, should be PascalCase
 - every other directory should be camelCase
 
 Try it out and Cheeeers!
