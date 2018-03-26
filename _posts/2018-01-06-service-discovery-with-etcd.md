@@ -26,7 +26,7 @@ Let start right off the bat with quick overview what `etcd` is:
 * publish/subscribe
 * get/put
 * leases (Time to live)
-* uses grcp for communication
+* uses grpc for communication
 * uses RAFT (leader election)
 * usually used for handling state in distributed systems (service discovery, shared configuration)
 * used in Kubernetes[^2]
@@ -204,11 +204,11 @@ public class ApiModule : NancyModule
 }
 ```
 
-## Etcd Grcp Client library
+## Etcd Grpc Client library
 
 I extracted grpc part from above project to separate github repo and created nuget out of that.   
 It greatly simplifies communication with etcd in dotnet projects, and since it's .net standard package it can be used in both .net framework and .net core projects.   
 Check it out if it fits your needs and contribute :)
 
 [Github repo](https://github.com/UnderNotic/EtcdGrpcClient){: .btn .btn--primary}{:target="_blank"}
-[Nuget page](https://www.nuget.org/packages/EtcdGrcpClient){: .btn .btn--primary}{:target="_blank"}
+[Nuget page](https://www.nuget.org/packages/EtcdGrpcClient){: .btn .btn--primary}{:target="_blank"}
