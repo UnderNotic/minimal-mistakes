@@ -11,7 +11,7 @@ hide_signup: true
 ## <img style="height:90px;" alt="etcd grpc client" src="https://raw.githubusercontent.com/undernotic/etcdgrpcclient/master/img/logo.png">
 
 [Github repo](https://github.com/UnderNotic/etcdgrpcclient){: .btn .btn--primary}{:target="_blank"}
-[![appveyor status](https://ci.appveyor.com/api/projects/status/github/undernotic/etcdgrpcclient)](https://ci.appveyor.com/project/UnderNotic/etcdgrpcclient) [![NuGet](https://img.shields.io/nuget/vpre/EtcdGrcpClient.svg?style=plastic)](https://www.nuget.org/packages/EtcdGrcpClient)
+[![appveyor status](https://ci.appveyor.com/api/projects/status/github/undernotic/etcdgrpcclient)](https://ci.appveyor.com/project/UnderNotic/etcdgrpcclient) [![NuGet](https://img.shields.io/nuget/vpre/EtcdGrpcClient.svg?style=plastic)](https://www.nuget.org/packages/EtcdGrpcClient)
 
 Simple yet useful .net etcd v3 grpc client
 
