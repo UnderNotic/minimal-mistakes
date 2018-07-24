@@ -80,7 +80,7 @@ analytics:
 # Site Author
 author:
   name             : "Piotr Szymura"
-  avatar           : "/assets/images/github_ava.png"
+  avatar           : "/assets/images/github_ava.jpg"
   bio              : "software engineer, open source contributor, crypto/blockchain enthusiast, try hard guitarist, starcraft fan"
   location         : "Wrocław"
   email            : "undernotic@gmail.com"
