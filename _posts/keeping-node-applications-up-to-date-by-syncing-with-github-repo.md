@@ -1,5 +1,5 @@
 ---
-title: "Keeping node applications up to date by syncing with github repo"
+title: "Keeping node applications up to date by syncing with github repo aka Poor's man CI"
 excerpt: "Lightweight automated CI pipe"
 header:
  teaser:
