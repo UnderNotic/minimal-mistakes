@@ -19,7 +19,7 @@ Simple yet useful .net etcd v3 grpc client
 
 ___
 
-# <img height="100" alt="react-file-load" src="https://raw.githubusercontent.com/undernotic/react-file-load/master/example/src/logo.png">
+# <img style="height:75px" alt="react-file-load" src="https://raw.githubusercontent.com/undernotic/react-file-load/master/example/src/logo.png">
 
 [![Build Status](https://travis-ci.org/UnderNotic/react-file-load.svg?branch=master)](https://travis-ci.org/UnderNotic/react-file-load)
 [![BCH compliance](https://bettercodehub.com/edge/badge/UnderNotic/react-file-load?branch=master)](https://bettercodehub.com/)
