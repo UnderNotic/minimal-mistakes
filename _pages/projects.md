@@ -19,6 +19,21 @@ Simple yet useful .net etcd v3 grpc client
 
 ___
 
+# <img height="100" alt="react-file-load" src="https://raw.githubusercontent.com/undernotic/react-file-load/master/example/src/logo.png">
+
+[![Build Status](https://travis-ci.org/UnderNotic/react-file-load.svg?branch=master)](https://travis-ci.org/UnderNotic/react-file-load)
+[![BCH compliance](https://bettercodehub.com/edge/badge/UnderNotic/react-file-load?branch=master)](https://bettercodehub.com/)
+[![dependencies Status](https://david-dm.org/undernotic/react-file-load/status.svg)](https://david-dm.org/undernotic/react-file-load)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+[![NPM](https://nodei.co/npm/react-file-load.png)](https://nodei.co/npm/react-file-load/)
+
+React component for loading data from files. [deaddesk.top/react-file-load](https://deaddesk.top/react-file-load)
+
+**Technologies**: ReactJS, Javascript, Jest, Rollup, Travis
+
+
+___
 
 ## <img style="height:150px;" alt="Readery" src="https://raw.githubusercontent.com/undernotic/readery/master/img/readery.png">
 
