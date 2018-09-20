@@ -51,6 +51,17 @@ Big file loader in chunks for browser
 
 ___
 
+## <img style="height:150px;" alt="FastDictionaryComparer" src="https://raw.githubusercontent.com/undernotic/FastDictionaryComparer/master/assets/logo.png">
+
+[Github repo](https://github.com/UnderNotic/FastDictionaryComparer){: .btn .btn--primary}{:target="_blank"}
+[![appveyor status](https://ci.appveyor.com/api/projects/status/github/undernotic/FastDictionaryComparer)](https://ci.appveyor.com/project/UnderNotic/FastDictionaryComparer) [![NuGet](https://img.shields.io/nuget/vpre/FastDictionaryComparer.svg?style=plastic)](https://www.nuget.org/packages/FastDictionaryComparer)
+
+Compare dictionaries in performant way, much faster than using linq
+
+**Technologies**: C#, .net standard, .net core, xunit
+
+___
+
 ## <img style="height:150px;" alt="Guardy" src="https://raw.githubusercontent.com/undernotic/guardy/master/img/logo-title.png">
 
 [Github repo](https://github.com/UnderNotic/guardy){: .btn .btn--primary}{:target="_blank"}
