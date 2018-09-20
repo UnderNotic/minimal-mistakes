@@ -8,7 +8,7 @@ hide_signup: true
 ---
 
 ## Open Source Libraries:
-## <img style="height:90px;" alt="etcd grpc client" src="https://raw.githubusercontent.com/undernotic/etcdgrpcclient/master/img/logo.png">
+# <img style="height:90px;" alt="etcd grpc client" src="https://raw.githubusercontent.com/undernotic/etcdgrpcclient/master/img/logo.png">
 
 [Github repo](https://github.com/UnderNotic/etcdgrpcclient){: .btn .btn--primary}{:target="_blank"}
 [![appveyor status](https://ci.appveyor.com/api/projects/status/github/undernotic/etcdgrpcclient)](https://ci.appveyor.com/project/UnderNotic/etcdgrpcclient) [![NuGet](https://img.shields.io/nuget/vpre/EtcdGrpcClient.svg?style=plastic)](https://www.nuget.org/packages/EtcdGrpcClient)
@@ -35,7 +35,7 @@ React component for loading data from files. [deaddesk.top/react-file-load](http
 
 ___
 
-## <img style="height:150px;" alt="Readery" src="https://raw.githubusercontent.com/undernotic/readery/master/img/readery.png">
+# <img style="height:150px;" alt="Readery" src="https://raw.githubusercontent.com/undernotic/readery/master/img/readery.png">
 
 [Github repo](https://github.com/UnderNotic/readery){: .btn .btn--primary}{:target="_blank"}
 [![Build Status](https://travis-ci.org/UnderNotic/readery.svg?branch=master)](https://travis-ci.org/UnderNotic/readery)
@@ -51,7 +51,7 @@ Big file loader in chunks for browser
 
 ___
 
-## <img alt="FastDictionaryComparer" src="https://raw.githubusercontent.com/undernotic/FastDictionaryComparer/master/assets/logo.png">
+# <img alt="FastDictionaryComparer" src="https://raw.githubusercontent.com/undernotic/FastDictionaryComparer/master/assets/logo.png">
 
 [Github repo](https://github.com/UnderNotic/FastDictionaryComparer){: .btn .btn--primary}{:target="_blank"}
 [![appveyor status](https://ci.appveyor.com/api/projects/status/github/undernotic/FastDictionaryComparer)](https://ci.appveyor.com/project/UnderNotic/FastDictionaryComparer) [![NuGet](https://img.shields.io/nuget/vpre/FastDictionaryComparer.svg?style=plastic)](https://www.nuget.org/packages/FastDictionaryComparer)
@@ -62,7 +62,7 @@ Compare dictionaries in performant way, much faster than using linq
 
 ___
 
-## <img style="height:150px;" alt="Guardy" src="https://raw.githubusercontent.com/undernotic/guardy/master/img/logo-title.png">
+# <img style="height:150px;" alt="Guardy" src="https://raw.githubusercontent.com/undernotic/guardy/master/img/logo-title.png">
 
 [Github repo](https://github.com/UnderNotic/guardy){: .btn .btn--primary}{:target="_blank"}
 [![CircleCI](https://circleci.com/gh/UnderNotic/guardy.svg?style=svg)](https://circleci.com/gh/UnderNotic/guardy)
