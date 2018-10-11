@@ -11,21 +11,39 @@ tags:
 
 
 ## \#1 Array.range
+```javascript
+[...Array(10).keys()]
+```
 
-
-
-## \#2 Iterate over object properties in declarative way
-
-Object.keys({}).map(key => Object[key] = "ss")
 
 ## \#3 Array distinct
-
-## \#4 Monkey patching
 
 ```javascript
 new Set([ ...arr])
 ```
 
-## Shallow object copying
+## \#4 Difference of two arrays
 
-## Contructor bind this nope in class
+## \#5 Array Group by
+
+## \#6 Count same items in array
+
+## \#6 Intersection of two arrays
+
+## \#6 Merge objects
+
+## \#6 Object difference
+
+## \#6 Chunk array
+
+## \#6 Array functions on string
+```javascript
+ "hello".split("").map(_ => "x").join("")
+```
+
+
+
+## \#2 Iterate over object properties in declarative way
+```javascript
+Object.keys({}).map(key => Object[key] = "ss")
+```
