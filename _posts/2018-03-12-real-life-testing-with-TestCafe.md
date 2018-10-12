@@ -29,7 +29,6 @@ The plan is to:
 
 Let's have html page setup out of the way:
 ```html
-
 <!DOCTYPE html>
 <html>
 <head>
