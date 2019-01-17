@@ -19,7 +19,7 @@ tags:
 ## \#2 Array distinct
 ```javascript
 let arr = [1, 2, 2, 3];
-new Set([ ...arr]);
+[...new Set(arr)];
 // [1, 2, 3]
 ```
 
