@@ -102,5 +102,5 @@ let obj = { prop: "prop" };
 Object.keys(obj).map((key, i) => obj[key] + i);
 ```
 
-Keep in mind if your looking for top notch performance all above and much more is covered with optimization in mind in lodash library.
-Of course during interview process you won't be using that.
+## ...
+Be aware that if you'r looking for top notch performance all above and much more is covered with optimization in mind in lodash library.
