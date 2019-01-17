@@ -10,7 +10,7 @@ tags:
   - utility   
 ---
 
-## \#1 Array.range
+## \#1 Array range
 ```javascript
 [...Array(10).keys()];
 // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -85,7 +85,7 @@ var obj1 = { prop1: "prop1" };
 var obj2 = { prop2: "prop2" };
 var merged1 = { ...obj1, ...obj2};
 // or
-var merged2 = Object.assign(obj1, obj2);
+var merged2 = Object.assign({}, obj1, obj2);
 
 // { prop1: "prop1", prop2: "prop2" }
 ```
