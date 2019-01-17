@@ -35,7 +35,7 @@ arr1.filter(i => !arr2.includes(i))
 ```javascript
 let arr1 = [1, 2, 3];
 let arr2 = [2, 3, 4];
-array1.filter(value => array2.indexOf(value) !== -1);
+arr1.filter(i => arr2.includes(i))
 // [2, 3]
 ```
 
