@@ -14,20 +14,20 @@ tags:
 --- 
 
 ## The need
-Ever wanted to have your running nodejs app synced with github repository?
+Ever wanted to have your nodejs app synced with github repository at runtime?
 Let say you have rasperry pi that is running your node app.
 Probably You don't want to pull the changes manually everytime just to see updates in your app? It could be great to have some kind of automated deployment, so your app is running up to date source code from github repository.  
-So I face this and tried solving it with teamcity and jenkins but those were to heavy for raspberry so I decided to write something more lightweight and today I will share it with You :).
+So I faced this and tried solving it with teamcity and jenkins but those were to heavy and complicated for raspberry so I decided to write something more lightweight and today I will share it with You :).
 
 ## Requirement
 To set it up, github has to know what to call, meaning server with node application needs to be exposed to public internet.
 
 If that's the case great, if not then it has to be exposed.
 There are two options:
-- fully manual that require public ip and forwarding of port 5000 on router, you can read about it here
+- fully manual that require public ip and enabled forwarding of port 5000 on router, you can read about it [here.](https://deaddesk.com/exposing-local-server-to-the-public-internet/)
 - tools like ngrok, which do all the heavy lifting for you
 
-Eventually this public url will be used by github, it will send post request with information, that given repo has been updated.
+Eventually this public url will be used by github to send post request with information, that given repo has been updated.
 
 ## Making it work
 To make it work:
@@ -85,9 +85,9 @@ router.post('/payload', async ctx => {
 ```
 
 ## Last but not least - automatic server restarts - PM2
-By adding pm2 into the equation, You can have automatic server restarts every time code for app changes in other words pushing code to github will automatically refresh server to use the newest code, this is additionaly done gracefully without any hiccups.
+By adding pm2 into the equation, You can have automatic server restarts every time code for app changes. In other words pushing code to github will automatically refresh server to use the newest code, this is additionaly done gracefully without any hiccups.
 
-Pm2 service will start on system startup and by default will watch directory for any code changes.
+PM2 service will start on system startup and by default will watch directory for any code changes.
 If pm2 is too heavy, use nodemon as a replacement.
 
 Try it out and save your time :)
