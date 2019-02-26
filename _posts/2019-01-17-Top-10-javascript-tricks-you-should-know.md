@@ -2,7 +2,6 @@
 title: "Top 10 javascript tricks that can save You on job interview"
 excerpt: "Good to know javascript snippets"
 header:
-  teaser: "assets/images/markup-syntax-highlighting-teaser.jpg"
 tags: 
   - javascript  
   - interview
