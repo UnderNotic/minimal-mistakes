@@ -24,13 +24,13 @@ In general typical home network consist of router, which is our gate to internet
 Keep in mind that this approach requires public ip assigned to our router from ISP.
 
 In tp-link routers it looks like this:
-- Forwarding -> Virtual Servers -> Add virtual server entry
-    - service port - port that will be called from outside
-    - internal port - port of our local server
-    - ip address - local ip address to the server
-    - protocol - tcp, udp or both can be chosen
-    - status - turn off forwarding without deleting entry
-    - common service port - configuration templates
+- `Forwarding` -> `Virtual Servers` -> `Add virtual server entry`
+    - `service port` - port that will be called from outside
+    - `internal port` - port of our local server
+    - `ip address` - local ip address to the server
+    - `protocol` - tcp, udp or both can be chosen
+    - `status` - turn off forwarding without deleting entry
+    - `common service port` - configuration templates
 
 ![image-center](/assets/images/exposing-local-server-to-the-public-internet/new_forwarding.png){: .align-center }{:style="width: 100%"}
 
