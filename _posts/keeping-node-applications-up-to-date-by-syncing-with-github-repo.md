@@ -2,7 +2,7 @@
 title: "Keeping node applications up to date by syncing with github repo"
 excerpt: "Lightweight automated CI pipe aka Poor's man CI"
 header:
- teaser:
+ teaser: "assets/images/keeping-node-applications-up-to-date-by-syncing-with-github-repo/teaser.png"
 tags: 
   - nodejs
   - node
@@ -24,7 +24,7 @@ To set it up, github has to know what to call, meaning server with node applicat
 
 If that's the case great, if not then it has to be exposed.
 There are two options:
-- fully manual that require public ip and enabled forwarding of port 5000 on router, you can read about it [here.](https://deaddesk.com/exposing-local-server-to-the-public-internet/)
+- fully manual that require public ip and enabled forwarding of port 5000 on router, you can read about it [here.](https://deaddesk.top/exposing-local-server-to-the-public-internet/)
 - tools like ngrok, which do all the heavy lifting for you
 
 Eventually this public url will be used by github to send post request with information, that given repo has been updated.
