@@ -14,28 +14,27 @@ tags:
 --- 
 
 ## The need
-Ever wanted to have your nodejs app synced with github repository at runtime?
-Let say you have rasperry pi that is running your node app.
-Probably You don't want to pull the changes manually everytime just to see updates in your app? It could be great to have some kind of automated deployment, so your app is running up to date source code from github repository.  
+Ever wanted to have your nodejs app synced with github repository at runtime?  
+Let say you have raspberry pi that is running your node app.
+Probably You don't want to pull the changes manually every time just to see updates in your app? It could be great to have some kind of automated deployment, so your app is running up to date source code from github repository.  
 So I faced this and tried solving it with teamcity and jenkins but those were to heavy and complicated for raspberry so I decided to write something more lightweight and today I will share it with You :).
 
-## Requirement
+## One thing that is required
 To set it up, github has to know what to call, meaning server with node application needs to be exposed to public internet.
 
-If that's the case great, if not then it has to be exposed.
+If that's already the case, great, if not then it has to be exposed.
 There are two options:
-- fully manual that require public ip and enabled forwarding of port 5000 on router, you can read about it [here.](https://deaddesk.top/exposing-local-server-to-the-public-internet/)
+- fully manual that requires public IP and enabled forwarding of port 5000 on router, you can read about it [here.](https://deaddesk.top/exposing-local-server-to-the-public-internet/)
 - tools like ngrok, which do all the heavy lifting for you
 
 Eventually this public url will be used by github to send post request with information, that given repo has been updated.
 
-## Making it work
+## Github repo setup
 To make it work:
 - Clone [the repo](https://github.com/UnderNotic/auto-deploy-raspberrypi){: .btn .btn--primary}{:target="_blank"} to raspberry pi or whatever device on which, nodejs app runs
 - Setup password needed for github hooks and put it to secret.txt file placed in the root of cloned repo
-- Create github hook in your app repo so on push it will send a signal to koa webserver listening fo it
+- Create github hook in your app repo so on push it will send a signal to koa webserver listening for it
 ![image-center](/assets/images/keeping-node-applications-up-to-date-by-syncing-with-github-repo/webhook.png){: .align-center }{:style="width: 100%"}
-- Run your node app using pm2/nodemon with file watch enabled so on github push app will be automatically reloaded
 
 ## Running git-sync
 
@@ -85,7 +84,7 @@ router.post('/payload', async ctx => {
 ```
 
 ## Last but not least - automatic server restarts - PM2
-By adding pm2 into the equation, You can have automatic server restarts every time code for app changes. In other words pushing code to github will automatically refresh server to use the newest code, this is additionaly done gracefully without any hiccups.
+By adding pm2 into the equation, You can have automatic server restarts every time code for app changes. In other words pushing code to github will automatically refresh server to use the newest code and this is done gracefully without any hiccups.
 
 PM2 service will start on system startup and by default will watch directory for any code changes.
 If pm2 is too heavy, use nodemon as a replacement.
