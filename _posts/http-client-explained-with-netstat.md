@@ -1,12 +1,13 @@
 ---
-title: "HttpClient explained with netstat by example"
-excerpt: ""
+title: "HttpClient explained using netstat"
+excerpt: "Animated examples showcasing HttpClient and netstat"
 header:
   teaser: "assets/images/http-client-explained-with-netstat/netstat.jpg"
 tags:
   - dotnet
   - httpclient
   - networking
+  - netstat
   - http
   - TCP
 ---
