@@ -2,6 +2,7 @@
 title: "Top 10 javascript tricks that can save You on job interview"
 excerpt: "Good to know javascript snippets"
 header:
+  teaser: "assets/images/top-10-javascript-tricks-interview/top10.jpg"
 tags: 
   - javascript  
   - interview

@@ -2,7 +2,7 @@
 title: "HttpClient explained using netstat"
 excerpt: "Animated examples showcasing HttpClient and netstat"
 header:
-  teaser: "assets/images/http-client-explained-with-netstat/netstat.jpg"
+  teaser: "assets/images/http-client-explained-using-netstat/netstat.jpg"
 tags:
   - dotnet
   - httpclient
@@ -12,7 +12,7 @@ tags:
   - TCP
 ---
 
-## Learn http client once again this time with netstat
+## Learn http client once again this time via netstat
 
 This is not a guide to:
 
@@ -38,7 +38,7 @@ Address is combination of IP/port, where:
 
 If machine is talking to the server, port for local address will be picked from pool of available ports. Port for foreign address will be of course port on what remote server is listening (in this case 443).
 
-![image-center](/assets/images/http-client-explained-with-netstat/tcp-conn.png){: .align-center }{:style="width: 75%"}
+![image-center](/assets/images/http-client-explained-using-netstat/tcp-conn.png){: .align-center }{:style="width: 75%"}
 
 ### Netstat columns:
 
@@ -52,7 +52,7 @@ If machine is talking to the server, port for local address will be picked from 
   - `LISTENING` local server is waiting for incoming remote connections
 
 <figure class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/http-client-explained-with-netstat/ns.png" alt="">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/http-client-explained-using-netstat/ns.png" alt="">
   <figcaption>Output of `netstat --TCP -pnW`</figcaption>
 </figure>
 
@@ -79,7 +79,7 @@ Make this loop iterate over 65,535 time and you will reach maximum number of por
 {: .notice--danger}
 
 <video controls autoplay loop muted width="100%">
-  <source src="/assets/images/http-client-explained-with-netstat/example_1.mp4" type="video/mp4">
+  <source src="/assets/images/http-client-explained-using-netstat/example_1.mp4" type="video/mp4">
 </video>
 
 ## Example 2
@@ -96,7 +96,7 @@ We still have overhead by not reusing existing connection, on the other hand por
 {: .notice--warning}
 
 <video controls autoplay loop muted width="100%">
-  <source src="/assets/images/http-client-explained-with-netstat/example_2.mp4" type="video/mp4">
+  <source src="/assets/images/http-client-explained-using-netstat/example_2.mp4" type="video/mp4">
 </video>
 
 ## Example 3
@@ -113,7 +113,7 @@ TCP connections are finally reused but remember this is only example.
 In real-life scenarios I recommend using `HttpClient Factories`, which takes care of `HttpClients` life-cycle, [more over here.](https://dotnetcoretutorials.com/2018/05/03/httpclient-factories-in-net-core-2-1/)
 
 <video controls autoplay loop muted width="100%">
-  <source src="/assets/images/http-client-explained-with-netstat/example_3.mp4" type="video/mp4">
+  <source src="/assets/images/http-client-explained-using-netstat/example_3.mp4" type="video/mp4">
 </video>
 
 Keep in my mind everything above was conducted on Linux Mint, on Windows situation in netstat might be slightly different.

@@ -2,7 +2,7 @@
 title: "Serverless for dummies - pragmatic encounter on azure - creating/solving real world problem"
 excerpt: "Serverless to dummies - pragmatic encounter on azure"
 header:
- teaser:
+ teaser: "assets/images/serverless-for-dummies/serverless.jpg"
 tags: 
   - serverless
   - c#
