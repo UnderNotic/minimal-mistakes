@@ -110,7 +110,7 @@ In code:
   - All connections immediately go to `TIME_WAIT` state after disposing `HttpClient`
 
 TCP connections are finally reused but remember this is only example.  
-In real-life scenarios I recommend using `HttpClient Factories`, which takes care of `HttpClients` life-cycle, [more over here.](https://dotnetcoretutorials.com/2018/05/03/httpclient-factories-in-net-core-2-1/)
+In real-life scenarios I recommend using `HttpClient Factories`, which takes care of `HttpClients` life-cycle, [more over here.](https://dotnetcoretutorials.com/2018/05/03/httpclient-factories-in-net-core-2-1/){:target="_blank"}
 
 <video controls autoplay loop muted width="100%">
   <source src="/assets/images/http-client-explained-using-netstat/example_3.mp4" type="video/mp4">
