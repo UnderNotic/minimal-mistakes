@@ -15,9 +15,10 @@ tags:
 --- 
 
 ## Strong wildcard +
-Using strong wildcard You can reserve all hostnames on given port.   
-Thing to remember is that even if there is another service that is reserving url on the same port without wildcard - 
-all http requests will go anyway to service that is using strong wildcard.         
+
+Using strong wildcard You can reserve all hostnames on given port.
+
+Thing to remember is that even if there is another service that is reserving url on the same port without wildcard then all http requests will go anyway to service that is using strong wildcard.  
 
 Sometimes example is more than thousand words:
 ``` csharp
@@ -37,7 +38,10 @@ In above all http traffic on port 80 will go to `Service #2`.
 `Console.WriteLine("Service #1")` won't be called at all.
 
 ## Weak wildcard *
-Suppose You have a service to which you want to redirect all trafic going through port 80, but at the same time You want to have another service running also on port 80 that will be accessible only using specified url (`http://mywebsite:80/`). If so weak wildcard is your friend.
+
+Suppose You have a service to which you want to redirect all trafic going through port 80, but at the same time 
+
+You want to have another service running also on port 80 that will be accessible only using specified url (`http://mywebsite:80/`). If so weak wildcard is your friend.
 
 Consider this example:
 ``` csharp

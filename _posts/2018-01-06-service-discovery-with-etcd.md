@@ -39,17 +39,21 @@ All this make etcd good candidate to store data used in service discovery.
 
 ## Client Side Service Discovery
 
-In client‑side discovery, the client is responsible for determining the network locations of available service instances and load balancing requests across them.   
-The client queries a service registry (etcd), which is a database of available service instances. The client then uses a load‑balancing algorithm to select one of the available service instances and makes a request.[^3]   
-Client in above context usually uses a library(common project or package) that knows how to get information what services are currently avaliable in the system.   
+In client‑side discovery, the client is responsible for determining the network locations of available service instances and load balancing requests across them.
+
+The client queries a service registry (etcd), which is a database of available service instances. The client then uses a load‑balancing algorithm to select one of the available service instances and makes a request.[^3]  
+Client in above context usually uses a library(common project or package) that knows how to get information what services are currently avaliable in the system.
+
 Drawback is that you have to write this client for every programming language used in microservices that need to talk to some other microservice.
 
 ## Server Side Service Discovery
 
-The client makes a request to another microservice via load balancer. Load balancer queries the service registry and routes each request to an available service instance.   
-As with client‑side discovery, service instances are registered and deregistered with the service registry.   
+The client makes a request to another microservice via load balancer. Load balancer queries the service registry and routes each request to an available service instance.
+
+As with client‑side discovery, service instances are registered and deregistered with the service registry.  
 Here load balancer is just another microservice but only that microservice is aware of service registry.
-As oppose to client side service discovery this solution is language agnostic but on the other hand requires additional network hop.
+
+Oppose to client side service discovery this solution is language agnostic but on the other hand requires additional network hop.
 
 [^3]: <https://www.nginx.com/blog/service-discovery-in-a-microservices-architecture/>
 
@@ -72,8 +76,11 @@ Solution consists of 3 projects:
 
 ## The Heartbeat
 
-`Node` reprents whatever service in the system that can scale horizontally and to whom requests are load-balanced.   
-On startup node is taking whatever port is available starting from 8080, then it's putting lease in etcd, which is basically setting key-value pair with 10 seconds TTL (time to live), once it is set, it starts refreshing TTL every 5 seconds. If Node dies, hangs... set up heatbeat key-value pair will be removed at the same time making this node unavailable and undiscoverable for the gateway.
+`Node` reprents whatever service in the system that can scale horizontally and to whom requests are load-balanced.
+
+On startup node is taking whatever port is available starting from 8080, then it's putting lease in etcd, which is basically setting key-value pair with 10 seconds TTL (time to live), once it is set, it starts refreshing TTL every 5 seconds.
+
+If Node dies, hangs... set up heatbeat key-value pair will be removed at the same time making this node unavailable and undiscoverable for the gateway.
 
 Key is designed in the following way `heartbeat|{NODE_TYPE}|{url}`, so the gateway can make use of etcd range subscribe to watch only for keys that starts with `heartbeat`, also from that key, information about node type and url that it is hosted at, can be retrieved.
 
@@ -206,8 +213,10 @@ public class ApiModule : NancyModule
 
 ## Etcd Grpc Client library
 
-I extracted grpc part from above project to separate github repo and created nuget out of that.   
-It greatly simplifies communication with etcd in dotnet projects, and since it's .net standard package it can be used in both .net framework and .net core projects.   
+I extracted grpc part from above project to separate github repo and created nuget out of that.
+
+It greatly simplifies communication with etcd in dotnet projects, and since it's .net standard package it can be used in both .net framework and .net core projects.
+
 Check it out if it fits your needs and contribute :)
 
 [Github repo](https://github.com/UnderNotic/EtcdGrpcClient){: .btn .btn--primary}{:target="_blank"}

@@ -10,8 +10,10 @@ tags:
   - project structure
   - js
   - frontend
---- 
+---
+
 ## Not so hot way
+
 Typical structure for example project looks something like this:
 ```
 components/
@@ -69,14 +71,17 @@ README.md
 ```
 
 Everything is divided by features, it scales by adding new directories per feature and not having +10 files in directories.
-It uses index.js files because typically a feature in redux is seen as a single container file, this way you can easily import something by doing `import Todo from containers/Todo`. Other files in feature directory are most of the times imported withing this directory.
+It uses index.js files because typically a feature in redux is seen as a single container file, this way you can easily import something by doing `import Todo from containers/Todo`.
+
+Other files in feature directory are most of the times imported withing this directory.
 
 I also use duck convention so redux constants, action creators and reducers are in one file under specific feature.
-It eliminates context switching and I don't like having 10 lines of imports in each redux file. 
+
+It eliminates context switching and I don't like having 10 lines of imports in each redux file.
 More about it
 [here](https://github.com/erikras/ducks-modular-redux/).
 Of course selectors or sagas are optional and if I'm using redux-thunk,
-it's logic should be placed in duck files under action creators section. 
+it's logic should be placed in duck files under action creators section.
 
 ```javascript
 // Actions
@@ -139,7 +144,9 @@ NODE_PATH=src/
 This file is used by default in create-react-app so if your using it nothing `webpack'y` has to be configured.
 
 ## File naming convention
-In the past I was using kebab-case for both files and directories no matter what was inside. I wanted to have same convention for server-side code (nodejs) and front-end code (react). 
+
+In the past I was using kebab-case for both files and directories no matter what was inside. I wanted to have same convention for server-side code (nodejs) and front-end code (react).
+
 But I took a different direction and went with community, deciding to use a convention that will tell from just watching at the name of a file or directory what is inside.
 - if a file is exporting something that can be instantiated (class, component) then use PascalCase
 - index.js files are lower-case

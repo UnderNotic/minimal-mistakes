@@ -10,9 +10,13 @@ tags:
   - csharp
   - networking
 --- 
+
 ## ConnectionManagement
-ConnectionManagement is a property found in app.config that allows to put a limit on number of connections to a specific host at tcp level.  
-This affects http calls, every one of these need estabilished tcp connection "underneath", client needs to reuse or open a new port to listen for the response from the server.[^1]  
+
+ConnectionManagement is a property found in app.config that allows to put a limit on number of connections to a specific host at tcp level.
+
+This affects http calls, every one of these need estabilished tcp connection "underneath", client needs to reuse or open a new port to listen for the response from the server.[^1]
+
 Together with various http headers it can be misunderstood providing unexpected behaviour.
 
 [^1]: <http://blog.catchpoint.com/2010/09/17/anatomyhttp/>
@@ -27,30 +31,38 @@ Together with various http headers it can be misunderstood providing unexpected 
   </system.net>  
 </configuration>  
 ```
-Setting ConnectionManagement is pretty straightforward, more specific entries are prioritized.  
+Setting ConnectionManagement is pretty straightforward, more specific entries are prioritized.
+
 For configuration above - every host other than "http://www.contoso.com" has maxconnection set on 2 meaning that there can be only 2 parallel calls to exact same host.
 
 ## TCP
+
 If ConnectionManagement property is not set in app.config it will default to 2.
+
 It's recommended setting for calling external services (blacklisting), nevertheless in internal environment sometimes you want to parallelize it more for example if service doesn't support batching and/or there is need for a faster response.
 ```xml
 <add address = "*" maxconnection = "2" />  
 ```
 
-In .net core this doesn't apply, by default there is no limit. 
+In .net core this doesn't apply, by default there is no limit.
 
 ## Connection: keep-alive
+
 This magic header (usually turned on by default) allows to reuse existing tcp connection and not create a new one(every http call gets it own tcp connection), which is noticeable performance wise.  
-It's worth noting it can take up to around 3 minutes to close tcp connection(socket) if there is unsent data from server waiting.    
+It's worth noting it can take up to around 3 minutes to close tcp connection(socket) if there is unsent data from server waiting.
+
 When You think about it turning it off with conjuction of high maxconnectionlimit can deplete ports that client host has available resulting in fatal exception when trying to make another http call.
 
 ## NTLM and UnsafeAuthenticatedConnectionSharing
-Depletion of ports can also happen when using ntlm.   
-For security reasons ntlm is forcing every http call to initialize new tcp connection (authentication on tcp level).   
+
+Depletion of ports can also happen when using ntlm.
+For security reasons ntlm is forcing every http call to initialize new tcp connection (authentication on tcp level).
+
 Thus keep-alive doesn't matter in this scenario, which can lead again to port depletion.  
 Luckily reusing connections can be forced by UnsafeAuthenticatedConnectionSharing on HttpWebRequest.
 
 ## Play around
+
 Following code is:
 * resolving domain name to ip
 * calling sample api with HttpWebRequest, HttpClient, RestSharp (all of them respect maxconnectionlimit)
