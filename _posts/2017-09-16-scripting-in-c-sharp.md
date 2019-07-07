@@ -42,14 +42,17 @@ choco install scriptcs
 
 
 ## On Linux
+
 Troubles begin on linux. Since you don't have chocolatey there and striptcs doesn't provide any deb package.
 It took me humongous amount o time to figure out how to make it work. I had to check on travis how project is build on linux.
 
 For sake of this I'm using mint 18, for ubuntu should be the same.
 
 Prerequisites are:
-- `mono` [(get it here)](http://www.mono-project.com/download/#download-lin)
-- `msbuild` (xbuild from mono didn't work for me). 
+
+- `mono` [(get it here)](http://www.mono-project.com/download/#download-lin){:target="_blank"}
+
+- `msbuild` (xbuild from mono didn't work for me).
 
 - install msbuild:  
 ```bash

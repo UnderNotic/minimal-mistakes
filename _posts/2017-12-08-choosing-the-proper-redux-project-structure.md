@@ -79,7 +79,7 @@ I also use duck convention so redux constants, action creators and reducers are 
 
 It eliminates context switching and I don't like having 10 lines of imports in each redux file.
 More about it
-[here](https://github.com/erikras/ducks-modular-redux/).
+[here](https://github.com/erikras/ducks-modular-redux/){:target="_blank"}.
 Of course selectors or sagas are optional and if I'm using redux-thunk,
 it's logic should be placed in duck files under action creators section.
 

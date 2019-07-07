@@ -12,14 +12,14 @@ tags:
 ---
 
 ## TestCafe
-TestCafe has lately become one of the most popular E2E testing tool in js/browser world.   
+TestCafe has lately become one of the most popular E2E testing tool in js/browser world.  
 End to end testing gives a confidence booster, especially when we doing something tricky and still we want to support shenanigans like IE11. 
 
 Let's jump into real-world example and make our hands dirty with TestCafe.
 
 ## Let's grab something that can be tested
-Recently I created small library than can help with loading big files, by reading chunk by chunk.   
-It's called `readery` and it's available on [github](https://github.com/UnderNotic/readery). Since testing file-reading in unit tests is not ideal scenario,
+Recently I created small library than can help with loading big files, by reading chunk by chunk.  
+It's called `readery` and it's available on [github](https://github.com/UnderNotic/readery){:target="_blank"}. Since testing file-reading in unit tests is not ideal scenario,
 let's check how this piece of code works for real.
 
 The plan is to:
@@ -70,7 +70,7 @@ test("Should split correctly with default new line split", async t => {
 It's worth to mention testcafe is in nature asynchronous. 
 Every method on `t` is async and can be awaited. By the way test file can be ES2017 code.
 
-Next TestCafe needs to be instructed to upload a [test file](https://github.com/UnderNotic/readery/blob/master/src/tests/test_file.txt) and then check if it was read correctly by checking content of `#file_output` element.
+Next TestCafe needs to be instructed to upload a [test file](https://github.com/UnderNotic/readery/blob/master/src/tests/test_file.txt){:target="_blank"} and then check if it was read correctly by checking content of `#file_output` element.
 
 
 Uploading file is super easy: 
@@ -114,7 +114,7 @@ To run tests TestCafe CLI can be used:
 Second parameter specifies browser, IE is also available, of course only on windows :)
 
 However to actually run the test, website has to be hosted somewhere, most probably on localhost if you'r testing local code.
-For that You can use good old [http-server](https://github.com/indexzero/http-server) npm package.
+For that You can use good old [http-server](https://github.com/indexzero/http-server){:target="_blank"} npm package.
 
 Now to run those two commands together, there is `|` operator but the problem with it is, that using http-server will cause process to never exit, which results in infinite continous integration test runs.
 ```js
@@ -128,8 +128,8 @@ To the rescue comes test cafe with `--app` parameter:
 
 ## Technology is here
 If You'r using travici for integration testing You can setup it easily to run testcafe with browser of your choice provided by saucelabs.
-Pretty neat tutorial exaplaining it in details [here]( http://devexpress.github.io/testcafe/documentation/recipes/running-tests-using-travis-ci-and-sauce-labs.html
-).
+Pretty neat tutorial exaplaining it in details [here.]( http://devexpress.github.io/testcafe/documentation/recipes/running-tests-using-travis-ci-and-sauce-labs.html
+){:target="_blank"}
 
 
 Cheers, for fully working example You can check mentioned readery [github repo](https://github.com/UnderNotic/readery).

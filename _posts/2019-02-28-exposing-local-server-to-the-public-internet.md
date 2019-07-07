@@ -36,7 +36,7 @@ In tp-link routers it looks like this:
 
 ![image-center](/assets/images/exposing-local-server-to-the-public-internet/virtual-servers.png){: .align-center }{:style="width: 100%"}
 
-Now check your public ip [here](https://www.whatismyip.com/what-is-my-public-ip-address/) and use it to access the server.
+Now check your public ip [here](https://www.whatismyip.com/what-is-my-public-ip-address/){:target="_blank"} and use it to access the server.
 
 ## Aternatives
-Alternatively there are tools that do all this trickery and more.They can even help you if you don't have public ip. If interested check [ngrok here.](https://ngrok.com/)
+Alternatively there are tools that do all this trickery and more.They can even help you if you don't have public ip. If interested check [ngrok here.](https://ngrok.com/){:target="_blank"}
