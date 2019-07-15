@@ -2,7 +2,7 @@
 title: "HttpClient explained using netstat"
 excerpt: "Animated examples showcasing HttpClient and netstat"
 header:
-  teaser: "assets/images/http-client-explained-using-netstat/netstat.jpg"
+  teaser: "assets/images/http-client-explained-using-netstat/teaser.png"
 tags:
   - dotnet
   - httpclient
@@ -16,7 +16,7 @@ tags:
 
 This is not a guide to:
 
-> How to use HttpClient in your app?
+> How to use HttpClient in your app ?
 
 But rather how to use netstat and how TCP connections are behaving in different code scenarios.
 
