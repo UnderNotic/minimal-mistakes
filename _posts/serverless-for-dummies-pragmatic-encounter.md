@@ -26,7 +26,7 @@ Thus it is harder/trickier to do small statefull things like connection pooling 
 
 <figure class="align-center" style="width: 75%">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/serverless-for-dummies/pros.jpeg" alt="">
-  <figcaption>Best place for servers in in trash.</figcaption>
+  <figcaption>Best place for servers is in the trash.</figcaption>
 </figure>
 <hr/>
 
