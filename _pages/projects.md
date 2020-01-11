@@ -10,7 +10,9 @@ hide_signup: true
 ## Applications
 # <img style="height:60px;" alt="Keyjitsu" src="https://raw.githubusercontent.com/undernotic/KeyJitsu/master/src/common/assets/katana/katana_logo.png">
 
-[Website](https://www.keyjitsu.space/){: .btn .btn--primary}{:target="_blank"} [Github](https://github.com/UnderNotic/KeyJitsu){: .btn .btn--primary}{:target="_blank"}  Quickly Learn Essential Keyboard Shortcuts
+[Website](https://www.keyjitsu.space/){: .btn .btn--primary}{:target="_blank"} [Github](https://github.com/UnderNotic/KeyJitsu){: .btn .btn--primary}{:target="_blank"}
+
+Quickly Learn Essential Keyboard Shortcuts
 
 **Technologies**: ReactJS, Javascript, Jest
 
@@ -30,6 +32,7 @@ ___
 # <img style="height:75px" alt="react-file-load" src="https://raw.githubusercontent.com/undernotic/react-file-load/master/example/src/logo.png">
 
 [Github repo](https://github.com/UnderNotic/react-file-load){: .btn .btn--primary}{:target="_blank"}
+[Documentation](https://deaddesk.top/react-file-load){: .btn .btn--primary}{:target="_blank"}
 [![Build Status](https://travis-ci.org/UnderNotic/react-file-load.svg?branch=master)](https://travis-ci.org/UnderNotic/react-file-load)
 [![BCH compliance](https://bettercodehub.com/edge/badge/UnderNotic/react-file-load?branch=master)](https://bettercodehub.com/)
 [![dependencies Status](https://david-dm.org/undernotic/react-file-load/status.svg)](https://david-dm.org/undernotic/react-file-load)
@@ -37,7 +40,7 @@ ___
 
 [![NPM](https://nodei.co/npm/react-file-load.png)](https://nodei.co/npm/react-file-load/)
 
-React component for loading data from files. [deaddesk.top/react-file-load](https://deaddesk.top/react-file-load)
+React component for loading data from files
 
 **Technologies**: ReactJS, Javascript, Jest, Rollup, Travis
 
