@@ -7,7 +7,15 @@ excerpt: My projects
 hide_signup: true
 ---
 
-## Open Source Libraries:
+## Applications
+# <img style="height:60px;" alt="Keyjitsu" src="https://raw.githubusercontent.com/undernotic/KeyJitsu/master/src/common/assets/katana/katana_logo.png">
+
+[Website](https://www.keyjitsu.space/){: .btn .btn--primary}{:target="_blank"} [Github](https://github.com/UnderNotic/KeyJitsu){: .btn .btn--primary}{:target="_blank"}  Quickly Learn Essential Keyboard Shortcuts
+
+**Technologies**: ReactJS, Javascript, Jest
+
+
+## Open Source Libraries
 # <img style="height:90px;" alt="etcd grpc client" src="https://raw.githubusercontent.com/undernotic/etcdgrpcclient/master/img/logo.png">
 
 [Github repo](https://github.com/UnderNotic/etcdgrpcclient){: .btn .btn--primary}{:target="_blank"}
@@ -32,7 +40,6 @@ ___
 React component for loading data from files. [deaddesk.top/react-file-load](https://deaddesk.top/react-file-load)
 
 **Technologies**: ReactJS, Javascript, Jest, Rollup, Travis
-
 
 ___
 
