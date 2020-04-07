@@ -63,7 +63,7 @@ Here is the final result:
 
 You can experience that by executing:
 
-[https://spotifytranslatorapp.azurewebsites.net/api/map?playlist=37i9dQZF1DXcBWIGoYBM5M](https://spotifytranslatorapp.azurewebsites.net/api/map?playlist=37i9dQZF1DXcBWIGoYBM5M){:target="_blank"}
+[https://spotifytranslatorapp.azurewebsites.net/api/map?playlist=37i9dQZF1DXcBWIGoYBM5M](https://spotifytranslatorfunctionapp.azurewebsites.net/api/map?playlist=2GK6j1Wh1NfmIPcFVXC97t){:target="_blank"}
 
 Where:
 
@@ -77,7 +77,7 @@ Never the less this of course can be deployed to cloud without a problem.
 
 We will use azure, below are prerequisites:
 
-- Setup `.net core` (version 2.1 >= required).
+- Setup `.net core` (version 3.1 >= required).
 - Install `Azure Functions Core Tools` from [here.](https://docs.microsoft.com/pl-pl/azure/azure-functions/functions-run-local){:target="_blank"}
 - We will need to connect to api of spotify and youtube. Since only limited usage of these api's is free, we need to create `youtube app` and `spotify app` so our usage can be tracked.
 
@@ -271,4 +271,6 @@ You can run it locally by cloning [repo](https://github.com/UnderNotic/spotify-t
     }
 ```
 
-Then just run `func start`, call [http://localhost:7071/api/map?playlist=YourSpotifyPlaylistId](http://localhost:7071/api/map?playlist=YourSpotifyPlaylistId){:target="_blank"} and have fun :)
+Then just run `func start` and call [http://localhost:7071/api/map?playlist=YourSpotifyPlaylistId](http://localhost:7071/api/map?playlist=YourSpotifyPlaylistId){:target="_blank"} 
+
+Have fun :)
