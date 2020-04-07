@@ -61,7 +61,7 @@ Here is the final result:
   <figcaption>Final look of the app in the browser.</figcaption>
 </figure>
 
-You can experience that by executing:
+You can experience that by executing, although it might return 500 if youtube api limits were exceeded:
 
 [https://spotifytranslatorapp.azurewebsites.net/api/map?playlist=37i9dQZF1DXcBWIGoYBM5M](https://spotifytranslatorfunctionapp.azurewebsites.net/api/map?playlist=2GK6j1Wh1NfmIPcFVXC97t){:target="_blank"}
 
