@@ -255,7 +255,7 @@ We don't want to create `HttpClient` for each request. Rather it should be long-
 
 Important thing to remebmer is that, there won't be one and only instance of `HttpClient`, instead each instance of a function runtime will have single `HttpClient` instance.
 
-For more info about `HttpClient` check [this blog post.](https://deaddesk.top/http-client-explained-with-netstat/){:target="_blank"}
+For more info about `HttpClient` check [this blog post.]({{ page.url | absolute_url }}http-client-explained-with-netstat/){:target="_blank"}
 {: .notice--info}
 
 ## Running locally

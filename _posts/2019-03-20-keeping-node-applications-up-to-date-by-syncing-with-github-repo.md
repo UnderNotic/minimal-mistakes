@@ -28,7 +28,7 @@ To set it up, github has to know what to call, meaning server with node applicat
 
 If that's already the case, great, if not then it has to be exposed.
 There are two options:
-- fully manual that requires public IP and enabled forwarding of port 5000 on router, you can read about it [here.]({{ page.url | absolute_url }}/exposing-local-server-to-the-public-internet/){:target="_blank"}
+- fully manual that requires public IP and enabled forwarding of port 5000 on router, you can read about it [here.]({{ page.url | absolute_url }}exposing-local-server-to-the-public-internet/){:target="_blank"}
 - tools like ngrok, which do all the heavy lifting for you
 
 Eventually this public url will be used by github to send post request with information, that given repo has been updated.
