@@ -1,6 +1,6 @@
 ---
 title: "Serverless for dummies - pragmatic encounter on azure"
-excerpt: "Serverless to dummies - pragmatic encounter on azure"
+excerpt: "Creating music app using azure functions"
 header:
  teaser: "assets/images/serverless-for-dummies/teaser.jpg"
 tags:
