@@ -14,15 +14,15 @@ tags:
 
 ## Here I am without the server
 
-Serverless in on the rise. Gaining a lot of traction to push new abililties, features and there is more and more hosting/deployment options.
+Serverless in on the rise. Gaining a lot of traction to push new abilities, features and there is more and more hosting/deployment options.
 
 It is not only bound to public cloud providers but it's also getting more popular on on-premise environments where you can tune it to your needs.
-This is backed up by frameworks like OpenFAAS, Kubeless, which are build on top of kubernetes and open source world.  
+This is backed up by frameworks like OpenFAAS, Kubeless, which are often build in open source world.  
 
 > Main idea of serverless is to not worry about infrastructure technicalities (no server) and instead focus on solving real problems/writing code.
 
-Serverless code generally is short-living and needs to be staless, meaning state should be put into/handled by external system, database, etc.
-Thus it is harder/trickier to do small statefull things like connection pooling (i.e. connections pooling to rmds databases).
+Serverless code generally is short-living and needs to be stateless, meaning state should be put into/handled by external system, database, etc.
+Thus it is harder/trickier to do small stateful things like connection pooling (i.e. connections pooling to sql databases).
 
 <figure class="align-center" style="width: 75%">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/serverless-for-dummies/pros.jpeg" alt="">
@@ -69,7 +69,7 @@ Where:
 
 - `playlist=` is a id of spotify playlist
 
-Please note i will focus on local development, thus i won't go throgh `azure portal` and creating/managing/deploying stuff there.  
+Please note i will focus on local development, thus i won't go through `azure portal` and creating/managing/deploying stuff there.  
 Never the less this of course can be deployed to cloud without a problem.
 {: .notice--warning}
 
@@ -121,7 +121,7 @@ It is ment to store secrets but with more features on top of it :)
 ## <b style="color: #ffce2f">Section #1</b>
 
 First we need to know what playlist we want to take from spotify.
-This is easy as getting `playlist id` from incoming reuqest query parameters.
+This is easy as getting `playlist id` from incoming request query parameters.
 
 ```csharp
 var playlist = req.Query["playlist"];
@@ -199,7 +199,7 @@ In this case we would have:
 ## <b style="color: #ff1b1b">Section #3</b>
 
 Finally, for each song from the playlist, we need to have link to youtube video and return it as a final response.
-To do so we call Youtube with `GET` request.
+To do so we call youtube with `GET` request.
 For this request no token is needed, we just set the `app key` in query parameters.
 
 Also in query params we provide:
@@ -251,9 +251,9 @@ public ResultItem(string name, string artist, string album, string ytId)
 
 ## Important note - HttpClient is in a static field
 
-We don't want to create `HttpClient` for each request. Rather it should be long-lived resource, this will lower memory footpring and it will benefit from reusing tcp connections.
+We don't want to create `HttpClient` for each request. Rather it should be long-lived resource, this will lower memory footprint and it will benefit from reusing tcp connections.
 
-Important thing to remebmer is that, there won't be one and only instance of `HttpClient`, instead each instance of a function runtime will have single `HttpClient` instance.
+Important thing to remember is that, there won't be one and only instance of `HttpClient`, instead each instance of a function runtime will have single `HttpClient` instance.
 
 For more info about `HttpClient` check [this blog post.]({{ page.url | absolute_url }}http-client-explained-with-netstat/){:target="_blank"}
 {: .notice--info}
