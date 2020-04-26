@@ -1,5 +1,5 @@
 ---
-title: "HTTP/2 Multiplexing explained by real world example"
+title: "HTTP/2 Multiplexing explained by example"
 excerpt: "How can http/2 multiplexing affect website loading time"
 header:
   teaser: "assets/images/http2-multiplexing/teaser.png"
