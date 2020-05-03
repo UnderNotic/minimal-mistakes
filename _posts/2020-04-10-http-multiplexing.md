@@ -20,7 +20,7 @@ Multiplexing is one of the new things coming with http/2. Let's see what is is a
 
 > Multiplexing is a method by which multiple digital signals are combined into one signal over a shared medium. The aim is to share a scarce resource. For example, in telecommunications, several telephone calls may be carried using one wire.[^1]
 
-[^1]: <https://en.wikipedia.org/wiki/Multiplexing/>
+[^1]: <https://en.wikipedia.org/wiki/Multiplexing>
 
   <img class="align-center" src="{{ site.url }}{{ site.baseurl }}/assets/images/http2-multiplexing/1.png" alt="">
 
