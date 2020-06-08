@@ -96,7 +96,9 @@ We will use azure, below are prerequisites:
 Entire code is available [here.](https://github.com/UnderNotic/spotify-to-youtube-translator){:target="_blank"}
 It's splitted into 3 major sections:
 
-![full](/assets/images/serverless-for-dummies/diagram.jpeg){: .full}
+<figure>
+	<a href="/assets/images/serverless-for-dummies/diagram.jpeg"><img src="/assets/images/serverless-for-dummies/diagram.jpeg"></a>
+</figure>
 
 ## Before we begin
 
