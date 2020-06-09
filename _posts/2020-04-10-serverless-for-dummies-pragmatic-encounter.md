@@ -81,7 +81,7 @@ We will use azure, below are prerequisites:
 - Install `Azure Functions Core Tools` from [here.](https://docs.microsoft.com/pl-pl/azure/azure-functions/functions-run-local){:target="_blank"}
 - We will need to connect to api of spotify and youtube. Since only limited usage of these api's is free, we need to create `youtube app` and `spotify app` so our usage can be tracked.
 
-## Scafolding
+## Scaffolding
 
 ```bash
   mkdir SpotifyToYoutubeTranslator && cd $_
