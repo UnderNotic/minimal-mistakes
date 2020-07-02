@@ -29,6 +29,18 @@
   a[rel="permalink"] {
     position: static;
   }
+
+  a {
+    color: #3d4144 !important;
+    text-decoration: none;
+  }
+  a:hover {
+    color: black !important;
+    text-decoration: underline;
+  }
+  a:visited {
+    color: black;
+  }
 }
 
 .archive__subtitle {

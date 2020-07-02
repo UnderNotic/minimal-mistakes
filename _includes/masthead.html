@@ -10,6 +10,7 @@
         <a class="site-title" href="{{ '/' | relative_url }}">
           {{ site.masthead_title | default: site.title }}
           {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
+          <img style="height: 30px; margin-left: -5px; margin-top: -5px;" src="/assets/images/icon-logo.png" alt="" itemprop="image">
         </a>
         <ul class="visible-links">
           {%- for link in site.data.navigation.main -%}

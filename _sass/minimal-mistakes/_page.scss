@@ -39,12 +39,12 @@ body {
   @include breakpoint($large) {
     float: right;
     width: calc(100% - #{$right-sidebar-width-narrow});
-    padding-right: $right-sidebar-width-narrow;
+    padding-right: $right-sidebar-width-narrow - 120;
   }
 
   @include breakpoint($x-large) {
     width: calc(100% - #{$right-sidebar-width});
-    padding-right: $right-sidebar-width;
+    padding-right: $right-sidebar-width - 120;
   }
 
   .page__inner-wrap {
@@ -125,6 +125,8 @@ body {
   }
 
   a:not(.btn) {
+    text-decoration: none;
+    
     &:hover {
       text-decoration: underline;
 
