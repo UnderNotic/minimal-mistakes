@@ -1,13 +1,13 @@
 ---
-title: 
+title:
 layout: single
 author_profile: true
-permalink: "/projects/"
+permalink: "/open-source-projects/"
 excerpt: Projects
 hide_signup: true
 ---
 
-
+<center><code>Open source projects</code></center>
 <div class="card">
     <div class="card-content">
 
