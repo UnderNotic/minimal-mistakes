@@ -16,21 +16,21 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "DeadDesk.top"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
-description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : "Piotr Szymura"
+description              : "Just Another IT Blog"
+url                      : "https://deaddesk-dev.netlify.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+repository               : "undernotic/undernotic.github.io"
+teaser                   : "/assets/images/logo.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : "disqus"
   disqus:
     shortname            : "deaddesktop"
   discourse:
@@ -64,7 +64,7 @@ google:
   instant_search         : # false (default), true
 # SEO Related
 google_site_verification :
-bing_site_verification   :
+bing_site_verification   : 9A05A8195C4A0F850678484EC49B11C1
 yandex_site_verification :
 naver_site_verification  :
 
@@ -89,49 +89,53 @@ social:
 analytics:
   provider               : "google-universal"
   google:
-    tracking_id          :
+    tracking_id          : "UA-102110814-1"
     anonymize_ip         : # true, false (default)
 
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
-  links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+  name             : "Piotr Szymura"
+  avatar           : "/assets/images/github_ava.jpg"
+  bio              : "software engineer<br/> full-stack developer<br/> open source contributor<br/> crypto/blockchain enthusiast<br/> try hard guitarist<br/> starcraft fan"
+  location         : "Wrocław"
+  email            : "undernotic@gmail.com"
+  uri              :
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  flickr           :
+  facebook         :
+  foursquare       :
+  github           : "UnderNotic"
+  google_plus      :
+  keybase          :
+  instagram        :
+  lastfm           :
+  linkedin         : "piotr-szymura-39783a8b"
+  pinterest        :
+  soundcloud       :
+  stackoverflow    : "4519970/undernotic"
+  steam            :
+  tumblr           :
+  twitter          : "UnderNotic"
+  vine             :
+  weibo            :
+  xing             :
+  youtube          : # "https://youtube.com/c/MichaelRoseDesign"
 
 # Site Footer
 footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url:
+      # url: "https://twitter.com/UnderNotic"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      # url: "https://github.com/UnderNotic"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
