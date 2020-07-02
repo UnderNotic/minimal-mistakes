@@ -15,15 +15,17 @@
   animation: $intro-transition;
   -webkit-animation-delay: 0.45s;
   animation-delay: 0.45s;
-  background-color: $footer-background-color;
+  // background-color: $footer-background-color;
 
   footer {
     @include clearfix;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
     max-width: 100%;
-    padding: 0 1em 2em;
+    padding: 0 1em 1em;
+    display: flex;
+    justify-content: center;
+
+    margin: 0 auto;
+    width: 100%;
 
     @include breakpoint($x-large) {
       max-width: $x-large;
