@@ -1,90 +1,249 @@
 ---
-title: Projects
+title:
 layout: single
 author_profile: true
-permalink: "/projects/"
-excerpt: My projects
+permalink: "/open-source-projects/"
+excerpt: Projects
 hide_signup: true
 ---
 
-## Applications
-# <img style="height:60px;" alt="Keyjitsu" src="https://raw.githubusercontent.com/undernotic/KeyJitsu/master/src/common/assets/katana/katana_logo.png">
+<center><code>Open source projects</code></center>
+<div class="card">
+    <div class="card-content">
 
-[Website](https://www.keyjitsu.space/){: .btn .btn--primary}{:target="_blank"} [Github](https://github.com/UnderNotic/KeyJitsu){: .btn .btn--primary}{:target="_blank"}
+        <img style="height:60px;" class="card-header" alt="Keyjitsu" src="https://raw.githubusercontent.com/undernotic/KeyJitsu/master/src/common/assets/katana/katana_logo.png">
+        
+        <hr/>
 
-Quickly Learn Essential Keyboard Shortcuts
+        <ul>
+            <li>
+                Quickly learn essential keyboard shortcuts and commands
+            </li>
+            <li>
+                Supports Intellij, Visual Studio and VS Code together with various keymaps
+            </li>
+            <li>
+                Single page application hosted on netlify
+            </li>
+        </ul>
 
-**Technologies**: ReactJS, Javascript, Jest
+        <div class="card-details">
+            <div class="card-details-inner">
+                <div class="read-more">
+                    <a href="https://www.keyjitsu.space/" class="btn btn--primary" target="_blank">Website</a>
+                    <a href="https://github.com/UnderNotic/KeyJitsu" class="btn btn--primary" target="_blank">GitHub</a>
+                </div>
+                <div class="card-options">
+                    <code>React.js|Jest</code>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-content">
+
+        <div class="card-header">
+
+            <img style="height:90px;" alt="etcd grpc client" src="https://raw.githubusercontent.com/undernotic/etcdgrpcclient/master/img/logo.png">
+
+            <hr/>
+
+            <div>
+                <a href="https://ci.appveyor.com/project/UnderNotic/etcdgrpcclient">
+                    <img src="https://ci.appveyor.com/api/projects/status/github/undernotic/etcdgrpcclient" alt="appveyor status">
+                </a>
+
+                <a href="https://www.nuget.org/packages/EtcdGrpcClient">
+                    <img src="https://img.shields.io/nuget/vpre/EtcdGrpcClient.svg?style=plastic" alt="NuGet">
+                </a>
+            </div>
+        </div>
+
+        <hr/>
+
+        <ul>
+            <li>
+                Simple yet useful etcd v3 grpc client
+            </li>
+              <li>
+                Offers a wide api
+            </li>
+             <li>
+                .NET Standard library available on nuget
+            </li>
+        </ul>
+
+        <div class="card-details">
+            <div class="card-details-inner">
+                <div class="read-more">
+                   <a href="https://github.com/UnderNotic/etcdgrpcclient" class="btn btn--primary" target="_blank">GitHub</a>
+                </div>
+                <div class="card-options">
+                    <code>C#|nunit|protobuf|grpc|etcd</code>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-content">
+
+        <div class="card-header">
+
+            <img style="height:75px" alt="react-file-load" src="https://raw.githubusercontent.com/undernotic/react-file-load/master/example/src/logo.png">
+            <hr/>
+            <a href="https://nodei.co/npm/react-file-load/"><img src="https://nodei.co/npm/react-file-load.png" alt="NPM"></a>
+            <div>
+                <a href="https://travis-ci.org/UnderNotic/react-file-load"><img src="https://travis-ci.org/UnderNotic/react-file-load.svg?branch=master" alt="Build Status"></a>
+                <a href="https://bettercodehub.com/"><img src="https://bettercodehub.com/edge/badge/UnderNotic/react-file-load?branch=master" alt="BCH compliance"></a>
+                <a href="https://david-dm.org/undernotic/react-file-load"><img src="https://david-dm.org/undernotic/react-file-load/status.svg" alt="dependencies Status"></a>
+                <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+            </div>            
+        </div>
+        <hr/>
+        <ul>
+            <li>
+                React component for loading data from files
+            </li>
+              <li>
+                Ability to load sizeable file by processing data in chunks
+            </li>
+             <li>
+                Javascript library available on npm
+            </li>
+        </ul>
+
+        <div class="card-details">
+            <div class="card-details-inner">
+                <div class="read-more">
+                  <a href="https://github.com/UnderNotic/react-file-load" class="btn btn--primary" target="_blank">GitHub</a>
+                  <a href="https://deaddesk.top/react-file-load" class="btn btn--primary" target="_blank">Documentation</a>
+                </div>
+                <div class="card-options">
+                    <code>React.js|Jest|Rollup|Travis</code>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-## Open Source Libraries
-# <img style="height:90px;" alt="etcd grpc client" src="https://raw.githubusercontent.com/undernotic/etcdgrpcclient/master/img/logo.png">
+<div class="card">
+    <div class="card-content">
 
-[Github repo](https://github.com/UnderNotic/etcdgrpcclient){: .btn .btn--primary}{:target="_blank"}
-[![appveyor status](https://ci.appveyor.com/api/projects/status/github/undernotic/etcdgrpcclient)](https://ci.appveyor.com/project/UnderNotic/etcdgrpcclient) [![NuGet](https://img.shields.io/nuget/vpre/EtcdGrpcClient.svg?style=plastic)](https://www.nuget.org/packages/EtcdGrpcClient)
+        <div class="card-header">
 
-Simple yet useful .net etcd v3 grpc client
+            <img style="height:150px;" alt="Readery" src="https://raw.githubusercontent.com/undernotic/readery/master/img/readery.png">
+            <hr/>
+            <a href="https://nodei.co/npm/readery/"><img src="https://nodei.co/npm/readery.png" alt="NPM"></a>
 
-**Technologies**: C#, .net standard, nunit, protobuf, grpc, etcd
+            <div>
+                <a href="https://travis-ci.org/UnderNotic/readery"><img src="https://travis-ci.org/UnderNotic/readery.svg?branch=master" alt="Build Status"></a>
+                <a href="https://bettercodehub.com/"><img src="https://bettercodehub.com/edge/badge/UnderNotic/readery?branch=master" alt="BCH compliance"></a>
+                <a href="https://david-dm.org/undernotic/readery"><img src="https://david-dm.org/undernotic/readery/status.svg" alt="dependencies Status"></a>
+                <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+            </div>            
+        </div>
+        <hr/>
+        <ul>
+            <li>
+                Big file loader in chunks for browser
+            </li>
+             <li>
+                Javascript library available on npm
+            </li>
+        </ul>
 
-___
+        <div class="card-details">
+            <div class="card-details-inner">
+                <div class="read-more">
+                    <a href="https://github.com/UnderNotic/readery" class="btn btn--primary" target="_blank">GitHub</a>
+                </div>
+                <div class="card-options">
+                    <code>Javascript|TestCafe|Rollup|Travis</code>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-# <img style="height:75px" alt="react-file-load" src="https://raw.githubusercontent.com/undernotic/react-file-load/master/example/src/logo.png">
+<div class="card">
+    <div class="card-content">
 
-[Github repo](https://github.com/UnderNotic/react-file-load){: .btn .btn--primary}{:target="_blank"}
-[Documentation](https://deaddesk.top/react-file-load){: .btn .btn--primary}{:target="_blank"}
-[![Build Status](https://travis-ci.org/UnderNotic/react-file-load.svg?branch=master)](https://travis-ci.org/UnderNotic/react-file-load)
-[![BCH compliance](https://bettercodehub.com/edge/badge/UnderNotic/react-file-load?branch=master)](https://bettercodehub.com/)
-[![dependencies Status](https://david-dm.org/undernotic/react-file-load/status.svg)](https://david-dm.org/undernotic/react-file-load)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+        <div class="card-header">
 
-[![NPM](https://nodei.co/npm/react-file-load.png)](https://nodei.co/npm/react-file-load/)
+            <img style="height:75px" alt="FastDictionaryComparer" src="https://raw.githubusercontent.com/undernotic/FastDictionaryComparer/master/assets/logo.png">
+            <hr/>
 
-React component for loading data from files
+            <div>
+                <a href="https://ci.appveyor.com/project/UnderNotic/FastDictionaryComparer"><img src="https://ci.appveyor.com/api/projects/status/github/undernotic/FastDictionaryComparer" alt="appveyor status"></a> <a href="https://www.nuget.org/packages/FastDictionaryComparer"><img src="https://img.shields.io/nuget/vpre/FastDictionaryComparer.svg?style=plastic" alt="NuGet"></a>
+            </div>            
+        </div>
+        <hr/>
+        <ul>
+            <li>
+                Compare dictionaries in performant way, much faster than using linq
+            </li>
+             <li>
+                .NET Standard library available on nuget
+            </li>
+        </ul>
 
-**Technologies**: ReactJS, Javascript, Jest, Rollup, Travis
+        <div class="card-details">
+            <div class="card-details-inner">
+                <div class="read-more">
+                    <a href="https://github.com/UnderNotic/FastDictionaryComparer" class="btn btn--primary" target="_blank">GitHub</a>
+                </div>
+                <div class="card-options">
+                    <code>C#|.net core|xunit</code>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-___
+<div class="card">
+    <div class="card-content">
 
-# <img style="height:150px;" alt="Readery" src="https://raw.githubusercontent.com/undernotic/readery/master/img/readery.png">
+        <div class="card-header">
+            
+            <img style="height:150px;" alt="Guardy" src="https://raw.githubusercontent.com/undernotic/guardy/master/img/logo-title.png">
+            <hr/>
 
-[Github repo](https://github.com/UnderNotic/readery){: .btn .btn--primary}{:target="_blank"}
-[![Build Status](https://travis-ci.org/UnderNotic/readery.svg?branch=master)](https://travis-ci.org/UnderNotic/readery)
-[![BCH compliance](https://bettercodehub.com/edge/badge/UnderNotic/readery?branch=master)](https://bettercodehub.com/)
-[![dependencies Status](https://david-dm.org/undernotic/readery/status.svg)](https://david-dm.org/undernotic/readery)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+            <a href="https://nodei.co/npm/guardy/"><img src="https://nodei.co/npm/guardy.png" alt="NPM"></a>
+            <div>
+                <a href="https://circleci.com/gh/UnderNotic/guardy"><img src="https://circleci.com/gh/UnderNotic/guardy.svg?style=svg" alt="CircleCI"></a>
+                <a href="https://coveralls.io/github/UnderNotic/guardy?branch=master"><img src="https://coveralls.io/repos/github/UnderNotic/guardy/badge.svg?branch=master" alt="Coverage Status"></a>
+                <a href="https://bettercodehub.com/"><img src="https://bettercodehub.com/edge/badge/UnderNotic/guardy?branch=master" alt="BCH compliance"></a>
+                <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+                <a href="https://david-dm.org/undernotic/guardy"><img src="https://david-dm.org/undernotic/guardy/status.svg" alt="dependencies Status"></a>
+            </div>            
+        </div>
+        <hr/>
+        <ul>
+            <li>
+               Simple and natural nested property accessor
+            </li>
+            <li>
+                Protect yourself from “Cannot read property ‘x’ of undefined” runtime exception
+            </li>
+            <li>
+                Javascript library available on npm
+            </li>
+        </ul>
 
-[![NPM](https://nodei.co/npm/readery.png)](https://nodei.co/npm/readery/)
-
-Big file loader in chunks for browser
-
-**Technologies**: Javascript, TestCafe, Rollup, Travis
-
-___
-
-# <img style="height:75px" alt="FastDictionaryComparer" src="https://raw.githubusercontent.com/undernotic/FastDictionaryComparer/master/assets/logo.png">
-
-[Github repo](https://github.com/UnderNotic/FastDictionaryComparer){: .btn .btn--primary}{:target="_blank"}
-[![appveyor status](https://ci.appveyor.com/api/projects/status/github/undernotic/FastDictionaryComparer)](https://ci.appveyor.com/project/UnderNotic/FastDictionaryComparer) [![NuGet](https://img.shields.io/nuget/vpre/FastDictionaryComparer.svg?style=plastic)](https://www.nuget.org/packages/FastDictionaryComparer)
-
-Compare dictionaries in performant way, much faster than using linq
-
-**Technologies**: C#, .net standard, .net core, xunit
-
-___
-
-# <img style="height:150px;" alt="Guardy" src="https://raw.githubusercontent.com/undernotic/guardy/master/img/logo-title.png">
-
-[Github repo](https://github.com/UnderNotic/guardy){: .btn .btn--primary}{:target="_blank"}
-[![CircleCI](https://circleci.com/gh/UnderNotic/guardy.svg?style=svg)](https://circleci.com/gh/UnderNotic/guardy)
-[![Coverage Status](https://coveralls.io/repos/github/UnderNotic/guardy/badge.svg?branch=master)](https://coveralls.io/github/UnderNotic/guardy?branch=master)
-[![BCH compliance](https://bettercodehub.com/edge/badge/UnderNotic/guardy?branch=master)](https://bettercodehub.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![dependencies Status](https://david-dm.org/undernotic/guardy/status.svg)](https://david-dm.org/undernotic/guardy)
-
-[![NPM](https://nodei.co/npm/guardy.png)](https://nodei.co/npm/guardy/)
-
-Simple and natural nested property accessor.  
-Protect yourself from "Cannot read property 'x' of undefined" runtime exception.
-
-**Technologies**: Javascript, Jest ,Rollup, Travis
+        <div class="card-details">
+            <div class="card-details-inner">
+                <div class="read-more">
+                    <a href="https://github.com/UnderNotic/guardy" class="btn btn--primary" target="_blank">GitHub</a>
+                </div>
+                <div class="card-options">
+                    <code>Javascript|Jest|Rollup|Travis</code>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
