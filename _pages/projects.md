@@ -11,7 +11,7 @@ hide_signup: true
 <div class="card">
     <div class="card-content">
 
-        <img style="height:60px;" class="card-header" alt="Keyjitsu" src="https://raw.githubusercontent.com/undernotic/KeyJitsu/master/src/common/assets/katana/katana_logo.png">
+        <img class="project-img" class="card-header" alt="Keyjitsu" src="https://raw.githubusercontent.com/undernotic/KeyJitsu/master/src/common/assets/katana/katana_logo.png">
         
         <hr/>
 
@@ -46,7 +46,7 @@ hide_signup: true
 
         <div class="card-header">
 
-            <img style="height:90px;" alt="etcd grpc client" src="https://raw.githubusercontent.com/undernotic/etcdgrpcclient/master/img/logo.png">
+            <img class="project-img" alt="etcd grpc client" src="https://raw.githubusercontent.com/undernotic/etcdgrpcclient/master/img/logo.png">
 
             <hr/>
 
@@ -93,7 +93,7 @@ hide_signup: true
 
         <div class="card-header">
 
-            <img style="height:75px" alt="react-file-load" src="https://raw.githubusercontent.com/undernotic/react-file-load/master/example/src/logo.png">
+            <img class="project-img" style="height:75px" alt="react-file-load" src="https://raw.githubusercontent.com/undernotic/react-file-load/master/example/src/logo.png">
             <hr/>
             <a href="https://nodei.co/npm/react-file-load/"><img src="https://nodei.co/npm/react-file-load.png" alt="NPM"></a>
             <div>
@@ -136,7 +136,7 @@ hide_signup: true
 
         <div class="card-header">
 
-            <img style="height:150px;" alt="Readery" src="https://raw.githubusercontent.com/undernotic/readery/master/img/readery.png">
+            <img class="project-img" style="height:150px;" alt="Readery" src="https://raw.githubusercontent.com/undernotic/readery/master/img/readery.png">
             <hr/>
             <a href="https://nodei.co/npm/readery/"><img src="https://nodei.co/npm/readery.png" alt="NPM"></a>
 
@@ -175,7 +175,7 @@ hide_signup: true
 
         <div class="card-header">
 
-            <img style="height:75px" alt="FastDictionaryComparer" src="https://raw.githubusercontent.com/undernotic/FastDictionaryComparer/master/assets/logo.png">
+            <img class="project-img" style="height:60px;" alt="FastDictionaryComparer" src="https://raw.githubusercontent.com/undernotic/FastDictionaryComparer/master/assets/logo.png">
             <hr/>
 
             <div>
@@ -210,7 +210,7 @@ hide_signup: true
 
         <div class="card-header">
             
-            <img style="height:150px;" alt="Guardy" src="https://raw.githubusercontent.com/undernotic/guardy/master/img/logo-title.png">
+            <img class="project-img" style="height:150px;" alt="Guardy" src="https://raw.githubusercontent.com/undernotic/guardy/master/img/logo-title.png">
             <hr/>
 
             <a href="https://nodei.co/npm/guardy/"><img src="https://nodei.co/npm/guardy.png" alt="NPM"></a>
