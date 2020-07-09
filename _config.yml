@@ -21,7 +21,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Piotr Szymura"
 description              : "Just Another IT Blog"
-url                      : "https://deaddesk-dev.netlify.com"
+url                      : "https://deaddesk.top"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "undernotic/undernotic.github.io"
 teaser                   : "/assets/images/logo.png"
