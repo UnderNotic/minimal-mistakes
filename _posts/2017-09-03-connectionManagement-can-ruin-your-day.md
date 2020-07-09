@@ -15,7 +15,7 @@ tags:
 
 ConnectionManagement is a property found in app.config that allows to put a limit on number of connections to a specific host at tcp level.
 
-This affects http calls, every one of these need estabilished tcp connection "underneath", client needs to reuse or open a new port to listen for the response from the server.[^1]
+This affects http calls, every one of these need established tcp connection "underneath", client needs to reuse or open a new port to listen for the response from the server.[^1]
 
 Together with various http headers it can be misunderstood providing unexpected behaviour.
 

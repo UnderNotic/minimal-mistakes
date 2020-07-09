@@ -82,7 +82,7 @@ After this package.json will be:
 ```
 
 
-I will follow project structure I usually use, more about it here (https://deaddesk.top/redux-project-structure/):
+I will follow project structure I usually use, more about it here ({{ page.url | absolute_url }}/redux-project-structure/):
 
 ```
 src/
