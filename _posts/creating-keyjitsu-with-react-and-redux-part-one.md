@@ -81,8 +81,7 @@ After this package.json will be:
 
 ```
 
-
-I will follow project structure I usually use, more about it here ({{ page.url | absolute_url }}/redux-project-structure/):
+I will follow project structure I usually use, more about it here ({% post_url 2017-12-08-choosing-the-proper-redux-project-structure %}):
 
 ```
 src/
