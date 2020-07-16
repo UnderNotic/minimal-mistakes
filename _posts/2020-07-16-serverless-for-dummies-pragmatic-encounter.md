@@ -78,7 +78,7 @@ Never the less this of course can be deployed to cloud without a problem.
 We will use azure, below are prerequisites:
 
 - Setup `.net core` (version 3.1 >= required).
-- Install `Azure Functions Core Tools` from [here.](https://docs.microsoft.com/pl-pl/azure/azure-functions/functions-run-local){:target="_blank"}
+- Install `Azure Functions Core Tools` from [here.](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local){:target="_blank"}
 - We will need to connect to api of spotify and youtube. Since only limited usage of these api's is free, we need to create `youtube app` and `spotify app` so our usage can be tracked.
 
 ## Scaffolding
@@ -257,7 +257,7 @@ We don't want to create `HttpClient` for each request. Rather it should be long-
 
 Important thing to remember is that, there won't be one and only instance of `HttpClient`, instead each instance of a function runtime will have single `HttpClient` instance.
 
-For more info about `HttpClient` check [this blog post.]({{ page.url | absolute_url }}http-client-explained-with-netstat/){:target="_blank"}
+For more info about `HttpClient` check [this blog post.]({% post_url 2019-11-26-http-client-explained-with-netstat %}){:target="_blank"}
 {: .notice--info}
 
 ## Running locally
