@@ -95,7 +95,7 @@ hide_signup: true
 
             <img class="project-img" style="height:75px" alt="react-file-load" src="https://raw.githubusercontent.com/undernotic/react-file-load/master/example/src/logo.png">
             <hr/>
-            <a href="https://nodei.co/npm/react-file-load/"><img src="https://nodei.co/npm/react-file-load.png" alt="NPM"></a>
+            <a href="https://badge.fury.io/js/react-file-load"><img src="https://badge.fury.io/js/react-file-load.svg" alt="npm version" height="18"></a>
             <div>
                 <a href="https://travis-ci.org/UnderNotic/react-file-load"><img src="https://travis-ci.org/UnderNotic/react-file-load.svg?branch=master" alt="Build Status"></a>
                 <a href="https://bettercodehub.com/"><img src="https://bettercodehub.com/edge/badge/UnderNotic/react-file-load?branch=master" alt="BCH compliance"></a>
@@ -138,7 +138,7 @@ hide_signup: true
 
             <img class="project-img" style="height:150px;" alt="Readery" src="https://raw.githubusercontent.com/undernotic/readery/master/img/readery.png">
             <hr/>
-            <a href="https://nodei.co/npm/readery/"><img src="https://nodei.co/npm/readery.png" alt="NPM"></a>
+            <a href="https://badge.fury.io/js/readery"><img src="https://badge.fury.io/js/readery.svg" alt="npm version" height="18"></a>
 
             <div>
                 <a href="https://travis-ci.org/UnderNotic/readery"><img src="https://travis-ci.org/UnderNotic/readery.svg?branch=master" alt="Build Status"></a>
@@ -213,7 +213,7 @@ hide_signup: true
             <img class="project-img" style="height:150px;" alt="Guardy" src="https://raw.githubusercontent.com/undernotic/guardy/master/img/logo-title.png">
             <hr/>
 
-            <a href="https://nodei.co/npm/guardy/"><img src="https://nodei.co/npm/guardy.png" alt="NPM"></a>
+            <a href="https://badge.fury.io/js/guardy"><img src="https://badge.fury.io/js/guardy.svg" alt="npm version" height="18"></a>
             <div>
                 <a href="https://circleci.com/gh/UnderNotic/guardy"><img src="https://circleci.com/gh/UnderNotic/guardy.svg?style=svg" alt="CircleCI"></a>
                 <a href="https://coveralls.io/github/UnderNotic/guardy?branch=master"><img src="https://coveralls.io/repos/github/UnderNotic/guardy/badge.svg?branch=master" alt="Coverage Status"></a>
