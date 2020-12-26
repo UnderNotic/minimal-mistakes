@@ -30,7 +30,7 @@ hide_signup: true
         <div class="card-details">
             <div class="card-details-inner">
                 <div class="read-more">
-                    <a href="https://www.keyjitsu.space/" class="btn btn--primary" target="_blank">Website</a>
+                    <a href="https://keyjitsu.netlify.app" class="btn btn--primary" target="_blank">Website</a>
                     <a href="https://github.com/UnderNotic/KeyJitsu" class="btn btn--primary" target="_blank">GitHub</a>
                 </div>
                 <div class="card-options">
